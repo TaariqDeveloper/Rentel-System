@@ -38,7 +38,7 @@ function Header() {
                   to="/blog"
                   className="text-gray-700 hover:text-red-500 transition"
                 >
-                  Blog
+                  Booking
                 </Link>
               </li>
               <li>
