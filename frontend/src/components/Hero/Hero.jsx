@@ -6,7 +6,8 @@ function Hero() {
     <div>
       {/* Hero Section with Search Bar */}
       <section
-        className="relative bg-cover bg-center h-screen flex flex-col justify-center items-center text-white pt-20"
+        className="relative bg-cover bg-center h-screen flex flex-col 
+        justify-center items-center text-white pt-20"
         style={{
           backgroundImage: `url(${image})`,
         }}

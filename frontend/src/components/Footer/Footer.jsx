@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <div className="bg-green-500 w-full mt-10 ">
+    <div  className=" ">
+      <div className="bg-green-500 w-full mt-10  ">
         <div className="px-10 pt-10 pb-10 flex justify-between">
           <div>
             <h1 className="text-5xl text-white font-bold pb-3">

@@ -6,7 +6,7 @@ function Header() {
     <div>
       <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          <h1 className="text-3xl font-bold text-red-600">Rental House</h1>
+          <h1 className="text-3xl font-bold text-green-500">Rental House</h1>
           <nav>
             <ul className="flex space-x-6 text-lg font-medium">
               <li>
@@ -27,7 +27,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/service"
                   className="text-gray-700 hover:text-red-500 transition"
                 >
                   Services
@@ -60,8 +60,8 @@ function Header() {
             </ul>
           </nav>
           <div>
-            <button className="bg-red-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition">
-              Sign In
+            <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition">
+              Login
             </button>
           </div>
         </div>
