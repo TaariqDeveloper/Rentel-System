@@ -1,10 +1,26 @@
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const CustomerRouter = require("./Router/CustomerRoute")
+// const UserRoute = require("./Router/auth.js")
+// const cors = require("cors")
+// const app = express();
+// const port = 6000;
+// app.use(express.json)
+// app.use(cors())
 const express = require("express");
 const mongoose = require("mongoose");
-const CustomerRouter = require("./Router/CustomerRoute")
+const cors = require("cors");
+
+// Import routes
+const CustomerRouter = require("./Router/CustomerRoute");
+const UserRoute = require("./Router/auth");
 
 const app = express();
-const port = 6000;
-app.use(express.json)
+const port = 5000;
+
+// Middleware
+app.use(express.json());
+app.use(cors());
 
 const connectDB = async () => {
     try {
@@ -20,6 +36,7 @@ const connectDB = async () => {
 connectDB();
 
 app.use(CustomerRouter)
+app.use(UserRoute)
 app.listen(port, () => {
     console.log(`Server is running on port number ${port}`);
 });
