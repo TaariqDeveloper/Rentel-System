@@ -54,7 +54,7 @@ function Header() {
                   to="/contact"
                   className="text-gray-700 hover:text-red-500 transition"
                 >
-                  Contact
+                  <Link to="/ContactForm"> Contact</Link>
                 </Link>
               </li>
             </ul>
