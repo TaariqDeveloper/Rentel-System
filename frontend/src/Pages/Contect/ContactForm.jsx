@@ -41,9 +41,10 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-lg mx-auto p-6 bg-gradient-to-r from-blue-500 to-purple-600 shadow-xl rounded-2xl text-white mt-20"
+      className="max-w-lg mx-auto p-6 bg-gradient-to-r from-green-500
+       bg-[#0a1636] shadow-xl rounded-2xl text-white mt-20"
     >
-      <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
+      <h2 className="text-3xl font-bold text-center mb-6 text-yellow-500">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -98,7 +99,7 @@ const ContactForm = () => {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full bg-white text-blue-600 font-semibold px-4 py-2 rounded-md shadow-lg hover:bg-gray-200 transition duration-300"
+          className="w-full bg-white text-yellow-500 font-semibold px-4 py-2 rounded-md shadow-lg hover:bg-gray-200 transition duration-300"
         >
           Send Message
         </motion.button>
