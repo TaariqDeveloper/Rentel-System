@@ -130,7 +130,7 @@ function SideNav() {
       </header>
 
       {/* Sidebar */}
-      <div className="bg-gray-900 text-white w-[250px] h-screen fixed flex flex-col p-5 mt-16 transition-all duration-500 shadow-lg">
+      <div className="bg-[#0a1636] text-white w-[250px] h-screen fixed flex flex-col p-5 mt-16 transition-all duration-500 shadow-lg">
         <h2 className="text-xl font-bold mb-6 text-center">Admin Dashboard</h2>
 
         <ul className="space-y-3">

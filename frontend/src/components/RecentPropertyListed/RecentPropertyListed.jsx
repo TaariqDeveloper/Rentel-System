@@ -220,7 +220,7 @@ function RecentPropertyListed() {
       <div className="container mx-auto">
         <motion.h2
           className="text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -244,7 +244,7 @@ function RecentPropertyListed() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: 2 }}
+                whileHover={{ scale: 1.1 }}
               >
                 <motion.img
                   src={image}

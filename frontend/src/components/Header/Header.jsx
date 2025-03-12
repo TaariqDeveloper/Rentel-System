@@ -13,7 +13,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-yellow-500 hover:text-yellow-500 transition"
                 >
                   Home
                 </Link>
@@ -61,10 +61,14 @@ function Header() {
             </ul>
           </nav>
           <div>
-            <button className="bg-green-500 text-white px-5 py-2
+        
+         <button className="bg-green-500 text-white px-5 py-2
              rounded-lg shadow-md hover:bg-yellow-500 transition  animate-pulse">
-              Login
+           <Link to="/Login">   Login </Link>
             </button>
+            
+            
+            
           </div>
         </div>
       </header>

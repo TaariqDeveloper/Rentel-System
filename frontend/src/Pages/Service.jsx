@@ -117,7 +117,7 @@ function Service() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-xl mt-3">Services</h1>
+          <h1 className="text-xl mt-3 text-yellow-500">Services</h1>
           <p className="text-5xl mt-5 font-bold">Services - All Services</p>
         </motion.div>
       </motion.div>

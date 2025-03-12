@@ -82,13 +82,13 @@ function About() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-xl mt-3">About Us</h1>
+          <h1 className="text-xl mt-3 text-yellow-500">About Us</h1>
           <p className="text-5xl mt-5 font-bold">About Us - Who We Are?</p>
         </motion.div>
       </motion.div>
 
       {/* Story Section */}
-      <div className="mt-20 ml-40">
+      <div className="mt-20 ml-40 ">
         <div className="flex flex-col lg:flex-row gap-12 pt-10 items-center">
           {/* Left Content */}
           <motion.div
@@ -101,19 +101,20 @@ function About() {
               Check out our company story and work process
             </p>
             <p className="mt-6 leading-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br></br>sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></br> Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris<br></br>
               nisi ut aliquip ex ea commodo consequat.
             </p>
             <p className="mt-6 leading-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br></br>
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></br> Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris<br></br>
               nisi ut aliquip.
             </p>
             <motion.button
-              className="bg-green-500 text-white px-8 py-2 rounded-3xl mt-10 shadow-lg hover:bg-green-600 transition duration-300"
+              className="bg-green-500 text-white px-8 py-2 rounded-3xl
+               mt-10 shadow-lg hover:bg-yellow-500 transition duration-300"
               whileHover={{ scale: 1.1 }}
             >
               More About Us
