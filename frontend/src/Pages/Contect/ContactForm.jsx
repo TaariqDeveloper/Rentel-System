@@ -13,13 +13,40 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  // const validateForm = () => {
+  //   let newErrors = {};
+  //   if (!formData.name.trim()) newErrors.name = "Name is required";
+  //   if (!formData.email.trim()) newErrors.email = "Email is required";
+  //   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+  //     newErrors.email = "Invalid email format";
+  //   if (!formData.message.trim()) newErrors.message = "Message is required";
+  //   return newErrors;
+  // };
+
+
+
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+  
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (/\d/.test(formData.name)) {
+      newErrors.name = "Name should not contain numbers";
+    }
+  
+    
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
+    }
+  
+    // Validate message: Ensure it is not empty
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+  
     return newErrors;
   };
 
@@ -37,7 +64,8 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div
+    
+    <motion.div 
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -105,6 +133,7 @@ const ContactForm = () => {
         </motion.button>
       </form>
     </motion.div>
+    
   );
 };
 
