@@ -7,15 +7,15 @@ function Hero() {
       {/* Hero Section with Search Bar */}
       <section
         className="relative bg-cover bg-center h-screen flex flex-col 
-        justify-center items-center text-white pt-20"
+        justify-center items-center text-white pt-20 "
         style={{
           backgroundImage: `url(${image})`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold">Search Your Next Home</h1>
-          <p className="text-lg mt-2">
+          <h1 className="text-5xl font-bold animate-pulse">Search Your Next Home</h1>
+          <p className="text-lg mt-2 text-yellow-500">
             Find new & featured property located in your local city.
           </p>
         </div>

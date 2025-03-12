@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50
+           ">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <h1 className="text-3xl font-bold text-green-500"><i className="fa-regular fa-square-caret-up text-yellow-500 mr-2"></i>Rental House</h1>
           <nav>
-            <ul className="flex space-x-6 text-lg font-medium">
+            <ul className="flex space-x-6 text-lg font-medium animate-pulse">
               <li>
                 <Link
                   to="/"
@@ -61,7 +62,7 @@ function Header() {
           </nav>
           <div>
             <button className="bg-green-500 text-white px-5 py-2
-             rounded-lg shadow-md hover:bg-yellow-500 transition">
+             rounded-lg shadow-md hover:bg-yellow-500 transition  animate-pulse">
               Login
             </button>
           </div>
