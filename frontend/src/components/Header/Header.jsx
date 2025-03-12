@@ -35,7 +35,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/blog"
+                  to="/booking"
                   className="text-gray-700 hover:text-red-500 transition"
                 >
                   Booking

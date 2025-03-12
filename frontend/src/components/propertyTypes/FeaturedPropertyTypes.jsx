@@ -128,11 +128,12 @@ function FeaturedPropertyTypes() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer"
-              initial={{ opacity: 0, y: 50 }}
+              className="bg-white p-6 rounded-lg shadow-md transition 
+              transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer"
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+              whileHover={{ scale: 1, transition: { duration: 0.3 } }}
+              transition={{ delay: index * 0.3, duration: 0.6 }}
             >
               <motion.div
                 className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-${item.bg} transition-transform duration-300`}
