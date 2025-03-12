@@ -7,6 +7,7 @@ import ContactForm from "./Pages/Contect/ContactForm";
 import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
+import Booking from "./Pages/Booking/Booking";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/ContactForm" element={<ContactForm />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/Login" element={<Login />} />

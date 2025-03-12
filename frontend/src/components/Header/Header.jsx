@@ -13,7 +13,8 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-yellow-500 hover:text-green-500 transition  hover:underline"
+                  className="text-yellow-500 hover:text-green-500 transition 
+                     "
                 >
                   Home
                 </Link>
@@ -36,7 +37,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/booking"
                   className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Booking
