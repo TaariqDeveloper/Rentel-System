@@ -13,7 +13,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-yellow-500 hover:text-yellow-500 transition"
+                  className="text-yellow-500 hover:text-green-500 transition  hover:underline"
                 >
                   Home
                 </Link>
@@ -21,7 +21,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   About
                 </Link>
@@ -29,7 +29,7 @@ function Header() {
               <li>
                 <Link
                   to="/service"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Services
                 </Link>
@@ -37,7 +37,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Booking
                 </Link>
@@ -45,7 +45,7 @@ function Header() {
               <li>
                 <Link
                   to="/pricing"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Pricing
                 </Link>
@@ -53,7 +53,7 @@ function Header() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   <Link to="/ContactForm"> Contact</Link>
                 </Link>

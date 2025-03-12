@@ -74,7 +74,7 @@ function Login() {
             type="submit" // Submit action for the form
             className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300"
           >
-            Signup
+            Login
           </button>
         </form>
 
