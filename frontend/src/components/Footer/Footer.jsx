@@ -137,7 +137,8 @@ function Footer() {
                 type="text"
                 placeholder="Email Address"
               />
-              <button className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition duration-300">
+              <button className="bg-green-500 text-white px-6 py-3 rounded-lg 
+              shadow-lg hover:bg-yellow-500 transition duration-300">
                 Subscribe
               </button>
             </div>
@@ -156,14 +157,15 @@ function Footer() {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="mt-4 text-center md:text-left hover:text-white transition duration-300 cursor-pointer"
+                  className="mt-4 text-center md:text-left hover:text-yellow-500 
+                  transition duration-300 cursor-pointer  ml-4"
                 >
                   {item}
                 </li>
               ))}
             </ul>
             <ul>
-              <h1 className="text-white text-2xl font-bold">ALL SECTIONS</h1>
+              <h1 className="text-white text-2xl font-bold">ALLSECTIONS</h1>
               {[
                 "Headers",
                 "Features",
@@ -173,7 +175,8 @@ function Footer() {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="mt-4 text-center md:text-left hover:text-white transition duration-300 cursor-pointer"
+                  className="mt-4 text-center md:text-left
+                   hover:text-yellow-500 transition duration-300 cursor-pointer ml-10"
                 >
                   {item}
                 </li>
@@ -185,7 +188,8 @@ function Footer() {
                 (item, index) => (
                   <li
                     key={index}
-                    className="mt-4 text-center md:text-left hover:text-white transition duration-300 cursor-pointer"
+                    className="mt-4 text-center md:text-left hover:text-yellow-500 
+                    transition duration-300 cursor-pointer  ml-8"
                   >
                     {item}
                   </li>

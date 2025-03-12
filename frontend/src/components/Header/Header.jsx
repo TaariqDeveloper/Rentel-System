@@ -6,13 +6,13 @@ function Header() {
     <div>
       <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          <h1 className="text-3xl font-bold text-green-500">Rental House</h1>
+          <h1 className="text-3xl font-bold text-green-500"><i className="fa-regular fa-square-caret-up text-yellow-500 mr-2"></i>Rental House</h1>
           <nav>
             <ul className="flex space-x-6 text-lg font-medium">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   Home
                 </Link>
@@ -20,7 +20,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   About
                 </Link>
@@ -28,15 +28,15 @@ function Header() {
               <li>
                 <Link
                   to="/service"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/booking"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  to="/"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   Booking
                 </Link>
@@ -44,7 +44,7 @@ function Header() {
               <li>
                 <Link
                   to="/pricing"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   Pricing
                 </Link>
@@ -52,7 +52,7 @@ function Header() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-700 hover:text-red-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition"
                 >
                   <Link to="/ContactForm"> Contact</Link>
                 </Link>
@@ -60,7 +60,8 @@ function Header() {
             </ul>
           </nav>
           <div>
-            <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition">
+            <button className="bg-green-500 text-white px-5 py-2
+             rounded-lg shadow-md hover:bg-yellow-500 transition">
               Login
             </button>
           </div>
