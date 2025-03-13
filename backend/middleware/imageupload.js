@@ -17,6 +17,21 @@
 
 // module.exports = uploadimage
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const multer = require("multer");
 
 // Define storage location and filename configuration

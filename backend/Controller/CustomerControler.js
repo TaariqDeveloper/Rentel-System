@@ -7,9 +7,8 @@ const RegisterCustomer = async (req, res) => {
             address: req.body.address,
             phone: req.body.phone,
             gender: req.body.gender,
-            image: req.file ? req.file.filename : null 
+            image: req.file ? req.file.filename : null
         });
-
         const SaveData = await newData.save();
         res.status(201).json(SaveData);
     } catch (error) {
@@ -19,3 +18,8 @@ const RegisterCustomer = async (req, res) => {
 };
 
 module.exports = {RegisterCustomer};
+
+
+
+
+

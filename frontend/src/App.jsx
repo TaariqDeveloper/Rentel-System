@@ -7,6 +7,7 @@ import ContactForm from "./Pages/Contect/ContactForm";
 import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
+import UserList from "./Pages/userList/UserList";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/UserList" element={<UserList />} />
       </Routes>
     </div>
   );
