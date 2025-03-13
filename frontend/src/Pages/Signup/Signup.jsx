@@ -475,7 +475,8 @@ function Signup() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl text-white">
+    <div className="flex justify-center items-center min-h-screen 
+    bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl text-white">
       <ToastContainer />
       <div className="bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-lg rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-6">Signup</h2>

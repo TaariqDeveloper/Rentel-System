@@ -267,10 +267,11 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl">
+    <div className="flex justify-center items-center min-h-screen
+     bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl">
       <ToastContainer /> {/* ✅ Toast container for notifications */}
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">
+      <div className="bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center text-white mb-6">
           Login
         </h2>
 
@@ -311,17 +312,17 @@ function Login() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300"
+            className="w-full bg-yellow-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300"
           >
             Login
           </button>
         </form>
 
-        <p className="text-center text-gray-500 mt-4">
+        <p className="text-center text-white mt-4">
           Don't have an account?{" "}
           <Link
             to="/register"
-            className="text-blue-500 hover:underline text-lg"
+            className="text-yellow-500 hover:underline text-lg"
           >
             Register
           </Link>
