@@ -7,12 +7,10 @@ import ContactForm from "./Pages/Contect/ContactForm";
 import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
-<<<<<<< HEAD
-import UserList from "./Pages/userList/UserList";
-=======
-import Booking from "./Pages/Booking";
 
->>>>>>> 126bf3f93a6856a9f6c9e8fd394822b1aa3212a7
+// import UserList from "./Pages/userList/UserList";
+import UserList from "./Pages/userList/UserList";
+import Booking from "./Pages/Booking";
 
 function App() {
   return (
@@ -27,6 +25,7 @@ function App() {
         <Route path="/register" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/UserList" element={<UserList />} />
+        <Route path="/booking" element={<Booking />} />
       </Routes>
     </div>
   );

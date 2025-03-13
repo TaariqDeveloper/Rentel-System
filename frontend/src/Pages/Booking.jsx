@@ -1,29 +1,20 @@
-import React from 'react'
-
-
-
-
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import Bookinglist from '../components/Bookinglist';
-
+import React from "react";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import Bookinglists from "../components/Bookinglist";
 
 function Booking() {
   return (
     <div>
-<Header/>
+      <Header />
 
-<div className='pt-48 pl-20'>
+      <div className="pt-48 pl-20">
+        <Bookinglists />
+      </div>
 
- 
-<Bookinglist/>
-</div>
-
-   <Footer/>
-
-
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Booking
+export default Booking;
