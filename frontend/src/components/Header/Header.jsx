@@ -138,7 +138,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/ContactForm"
                   className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Contact
