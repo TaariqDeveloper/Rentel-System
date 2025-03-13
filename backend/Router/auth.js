@@ -28,5 +28,8 @@ Router.get("/users", isAuthenticated, userControllers.getUser);
 // ✅ Admin-Only Routes
 Router.delete("/users/:id", isAuthenticated, isAdmin, userControllers.deleteUser);
 Router.put("/users/:id", isAuthenticated, isAdmin, userControllers.updateUser);
+// display user
+Router.get("/total/users", isAuthenticated, userControllers.TotalUsers);
+
 
 module.exports = Router;

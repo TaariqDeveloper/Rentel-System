@@ -245,4 +245,12 @@ const updateUser = async (req, res) => {
     }
 };
 
-module.exports = { CreateUser, CreateLogin, getUser, deleteUser, updateUser };
+// display users
+
+const TotalUsers= async(req,res)=>{
+    const total= await  User.find().countDocument()
+    if(total){
+        res.send({total})
+    }
+}
+module.exports = { CreateUser, CreateLogin, getUser, deleteUser, updateUser , TotalUsers};

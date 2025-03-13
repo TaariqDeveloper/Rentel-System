@@ -156,6 +156,23 @@ const deleteBooking = async (req, res) => {
 };
 
 
+// const TotalBooking= async(req,res)=>{
+//     const total= await  User.find().countDocuments()
+//     if(total){
+//         res.send({total})
+//     }
+//}
+
+
+// ✅ Get Total Number of Bookings
+const TotalBooking = async (req, res) => {
+  try {
+    const total = await Booking.find().countDocuments(); // Use Booking model
+    res.status(200).json({ success: true, total });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error fetching total bookings", error: error.message });
+  }
+};
 
 
 
@@ -166,4 +183,5 @@ const deleteBooking = async (req, res) => {
 
 
 
-module.exports = { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking};
+module.exports = { createBooking, getAllBookings, getBookingById, updateBooking,
+   deleteBooking, TotalBooking};
