@@ -154,4 +154,15 @@ const deleteBooking = async (req, res) => {
   }
 };
 
-module.exports = { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking };
+
+
+
+
+
+// this is qaas
+// Function to count total bookings
+
+
+
+
+module.exports = { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking};
