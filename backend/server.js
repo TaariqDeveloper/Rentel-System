@@ -71,6 +71,7 @@ const connectDB = async () => {
 connectDB().then(() => {
     app.use(CustomerRouter);
     app.use(UserRoute);
+    app.use("/allimages" , express.static("document"))
 
     app.listen(PORT, () => {
         console.log(`🚀 Server is running on port ${PORT}`);
