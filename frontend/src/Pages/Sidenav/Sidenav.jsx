@@ -321,7 +321,7 @@ function SideNav() {
           {/* Products */}
           <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
             <FaBox className="text-lg" />
-            <Link to="/" className="hover:underline">
+            <Link to="" className="hover:underline">
               <span>Products</span>
             </Link>
           </li>
