@@ -288,16 +288,24 @@ function Signup() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <ToastContainer />
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">
+=======
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-500
+       bg-[#0a1636] shadow-xl text-white">
+      <div className="bg-gradient-to-r from-green-500
+       bg-[#0a1636]  shadow-lg rounded-lg p-8 w-full max-w-md ">
+        <h2 className="text-2xl font-bold text-center  mb-6">
+>>>>>>> 126bf3f93a6856a9f6c9e8fd394822b1aa3212a7
           Signup
         </h2>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name" className="block text-gray-600 font-medium">
+            <label htmlFor="name" className="block  font-medium">
               Name
             </label>
             <input
@@ -311,7 +319,7 @@ function Signup() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-gray-600 font-medium">
+            <label htmlFor="email" className="block  font-medium">
               Email
             </label>
             <input
@@ -327,7 +335,7 @@ function Signup() {
           <div>
             <label
               htmlFor="password"
-              className="block text-gray-600 font-medium"
+              className="block  font-medium"
             >
               Password
             </label>
@@ -358,6 +366,7 @@ function Signup() {
 
           {/* Submit Button */}
           <button
+<<<<<<< HEAD
             type="submit"
             disabled={loading}
             className={`w-full text-white py-3 rounded-md transition duration-300 ${
@@ -365,17 +374,31 @@ function Signup() {
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-blue-500 hover:bg-blue-600"
             }`}
+=======
+            type="submit" // Submit action for the form
+            className="w-full bg-yellow-500 text-white py-3 rounded-md
+             hover:bg-yellow-500  transition duration-300"
+>>>>>>> 126bf3f93a6856a9f6c9e8fd394822b1aa3212a7
           >
             {loading ? "Signing up..." : "Signup"}
           </button>
         </form>
 
-        <p className="text-center text-gray-500 mt-4">
+        <p className="text-center  text-yellow-500 mt-4">
           Already have an account?{" "}
+<<<<<<< HEAD
           <Link to="/Login" className="text-blue-500 hover:underline">
             Login
+=======
+          <Link to="/Login">
+            <a href="#" className="text-white hover:underline text-lg">
+              Login
+            </a>
+>>>>>>> 126bf3f93a6856a9f6c9e8fd394822b1aa3212a7
           </Link>
         </p>
+        <hr className="bg-gradient-to-r from-green-500
+       bg-[#0a1636] shadow-xl mt-5"/>
       </div>
     </div>
   );

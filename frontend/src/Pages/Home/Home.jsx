@@ -6,6 +6,7 @@ import RecentPropertyListed from "../../components/RecentPropertyListed/RecentPr
 import Location from "../../components/location/location";
 import Footer from "../../components/Footer/Footer";
 
+
 function Home() {
   return (
     <div>

@@ -94,6 +94,7 @@
 // export default Footer;
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -109,7 +110,8 @@ function Footer() {
           </p>
         </div>
         <div className="mt-6">
-          <button className="bg-white text-green-500 px-10 py-4 rounded-full text-xl shadow-lg hover:bg-gray-100 transition duration-300">
+       <Link to="/"></Link>   <button className="bg-white text-green-500 px-6 py-3 
+          rounded-full text-xl shadow-lg hover:bg-yellow-500 transition duration-300">
             Contact Us Today
           </button>
         </div>

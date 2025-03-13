@@ -18,7 +18,8 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-yellow-500 hover:text-green-500 transition 
+                     "
                 >
                   Home
                 </Link>
@@ -26,7 +27,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   About
                 </Link>
@@ -34,31 +35,31 @@ function Header() {
               <li>
                 <Link
                   to="/service"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  to="/booking"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Booking
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/pricing"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Pricing
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-700 hover:text-yellow-500 transition"
+                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   <Link to="/ContactForm"> Contact</Link>
                 </Link>
@@ -66,12 +67,22 @@ function Header() {
             </ul>
           </nav>
           <div>
+<<<<<<< HEAD
             <button
               className="bg-green-500 text-white px-5 py-2
              rounded-lg shadow-md hover:bg-yellow-500 transition  animate-pulse"
             >
               <Link to="/Login">Login</Link>
+=======
+        
+         <button className="bg-green-500 text-white px-5 py-2
+             rounded-lg shadow-md hover:bg-yellow-500 transition  animate-pulse">
+           <Link to="/Login">   Login </Link>
+>>>>>>> 126bf3f93a6856a9f6c9e8fd394822b1aa3212a7
             </button>
+            
+            
+            
           </div>
         </div>
       </header>

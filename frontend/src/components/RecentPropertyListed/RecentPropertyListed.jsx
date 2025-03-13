@@ -220,7 +220,7 @@ function RecentPropertyListed() {
       <div className="container mx-auto">
         <motion.h2
           className="text-5xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -240,11 +240,13 @@ function RecentPropertyListed() {
             (image, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transition transform duration-500 hover:scale-110 hover:shadow-2xl cursor-pointer"
+                className="bg-white rounded-lg shadow-lg overflow-hidden 
+                transition transform duration-500 hover:scale-110 hover:shadow-2xl
+                 cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: 2 }}
+                whileHover={{ scale: 1.1 }}
               >
                 <motion.img
                   src={image}
@@ -274,7 +276,9 @@ function RecentPropertyListed() {
                   <motion.div whileHover={{ scale: 1.1 }}>
                     <Link
                       to="#"
-                      className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition transform hover:scale-105"
+                      className="bg-green-500 text-white px-4 py-2
+                       rounded-lg font-bold hover:bg-green-600 transition
+                        transform hover:scale-105"
                     >
                       ${Math.floor(Math.random() * 5000) + 2000}
                     </Link>

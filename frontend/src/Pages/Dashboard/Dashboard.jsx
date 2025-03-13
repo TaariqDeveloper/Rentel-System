@@ -5,9 +5,9 @@ import SideNav from "../Sidenav/Sidenav";
 function Dashboard() {
   return (
     <>
-      <SideNav />
+      <SideNav  />
       {/* Four Stat Boxes */}
-      <div className="ml-[22%] pt-20 flex gap-6">
+      <div className="ml-[22%] pt-20 flex gap-6  ">
         {/* Products Box */}
         <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg flex items-center gap-4 w-[250px]">
           <FaBox className="text-4xl" />
