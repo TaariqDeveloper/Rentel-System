@@ -7,7 +7,8 @@ import ContactForm from "./Pages/Contect/ContactForm";
 import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
-import Booking from "./Pages/Booking/Booking";
+import Booking from "./Pages/Booking";
+
 
 function App() {
   return (

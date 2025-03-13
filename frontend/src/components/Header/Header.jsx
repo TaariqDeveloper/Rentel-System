@@ -43,14 +43,14 @@ function Header() {
                   Booking
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/pricing"
                   className="text-gray-700 hover:text-yellow-500 transition hover:underline"
                 >
                   Pricing
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+  // import imge from "../images/p-1-png"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -33,6 +34,7 @@ function Login() {
     <div className="flex justify-center items-center min-h-screen 
     bg-gradient-to-r from-green-500
        bg-[#0a1636] shadow-xl">
+          {/* <img src={imge}  alt="" /> */}
       <div className="bg-gradient-to-r from-green-500
        bg-[#0a1636] shadow-xl rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-white mb-6">
