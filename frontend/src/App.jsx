@@ -10,7 +10,10 @@ import Login from "./Pages/Login/Login";
 
 // import UserList from "./Pages/userList/UserList";
 import UserList from "./Pages/userList/UserList";
-import Booking from "./Pages/Booking";
+import Booking from "./Pages/Booking/Booking";
+import BookingList from "./Pages/BookingList/BookingList";
+import UpdateBooking from "./Pages/UpdateBooking/UpdateBooking";
+// import Booking from "./Pages/Booking";
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
         <Route path="/register" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/UserList" element={<UserList />} />
+        {/* <Route path="/booking" element={<Booking />} /> */}
         <Route path="/booking" element={<Booking />} />
+        <Route path="/bookingList" element={<BookingList />} />
+        <Route path="/update-booking/:id" element={<UpdateBooking />} />
       </Routes>
     </div>
   );

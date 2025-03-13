@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-
 const CustomerModel = mongoose.Schema({
         name: {
                 type: String,

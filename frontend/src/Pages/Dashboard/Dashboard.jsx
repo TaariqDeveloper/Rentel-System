@@ -1,18 +1,21 @@
 import React from "react";
 import { FaBox, FaUsers, FaShoppingCart, FaUserShield } from "react-icons/fa";
 import SideNav from "../Sidenav/Sidenav";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   return (
     <>
-      <SideNav  />
+      <SideNav />
       {/* Four Stat Boxes */}
       <div className="ml-[22%] pt-20 flex gap-6  ">
         {/* Products Box */}
         <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg flex items-center gap-4 w-[250px]">
           <FaBox className="text-4xl" />
           <div>
-            <h3 className="text-xl font-semibold">Products</h3>
+            <h3 className="text-xl font-semibold">
+              <Link to="/bookingList">Booking</Link>{" "}
+            </h3>
             <p className="text-lg">120</p>
           </div>
         </div>
