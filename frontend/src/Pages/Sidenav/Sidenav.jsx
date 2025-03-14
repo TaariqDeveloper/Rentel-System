@@ -360,7 +360,7 @@ function SideNav() {
                 </li>
                 <li>
                   <Link
-                    to="/users/add"
+                    to="/register"
                     className="block p-2 rounded-lg hover:bg-gray-700 transition duration-300"
                   >
                     Add User

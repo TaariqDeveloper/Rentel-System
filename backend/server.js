@@ -41,6 +41,7 @@ const UserRoute = require("./Router/auth");
 const bookingRoutes = require("./Router/bookingRoutes");
 const contactRoutes = require("./Router/contactRoutes");
 
+
 const app = express();
 const port = 5000;
 
@@ -73,6 +74,7 @@ app.use(UserRoute);
 app.use("/uploads", express.static("uploads")); 
 app.use("/api", contactRoutes);
 app.use(contactRoutes)
+
 
 // Start server
 app.listen(port, () => {

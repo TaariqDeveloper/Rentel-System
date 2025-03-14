@@ -13,7 +13,7 @@ import Booking from "./Pages/Booking/Booking";
 import BookingList from "./Pages/BookingList/BookingList";
 import UpdateBooking from "./Pages/UpdateBooking/UpdateBooking";
 import AddCustomer from "./Pages/AddCustomer/AddCustomer";
-// import Booking from "./Pages/Booking";
+import OrdersPage from "./Pages/OrdersPage/OrdersPage";
 
 function App() {
   return (
@@ -32,6 +32,7 @@ function App() {
         <Route path="/bookingList" element={<BookingList />} />
         <Route path="/update-booking/:id" element={<UpdateBooking />} />
         <Route path="/addCustomer" element={<AddCustomer />} />
+        <Route path="/order" element={<OrdersPage />} />
       </Routes>
     </div>
   );
