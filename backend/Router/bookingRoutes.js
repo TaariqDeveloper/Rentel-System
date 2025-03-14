@@ -9,7 +9,7 @@
 
 
 const express = require("express");
-const { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking,TotalBooking } = require("../Controller/bookingController");
+const { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking,TotalBooking , TotalBook } = require("../Controller/bookingController");
 const router = express.Router();
 router.post("/bookings", createBooking); // ✅ Create booking
 router.get("/bookings", getAllBookings); // ✅ Fetch all bookings
@@ -18,6 +18,7 @@ router.put("/bookings/:id", updateBooking); // ✅ Update booking
 router.delete("/bookings/:id", deleteBooking); // ✅ Delete booking
 
 router.get("/total/bookings", TotalBooking);
+
 
 
 

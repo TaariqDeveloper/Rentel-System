@@ -84,7 +84,6 @@
 
 
 const Booking = require("../Model/Booking");
-
 // ✅ Create Booking
 const createBooking = async (req, res) => {
   try {
@@ -156,12 +155,7 @@ const deleteBooking = async (req, res) => {
 };
 
 
-// const TotalBooking= async(req,res)=>{
-//     const total= await  User.find().countDocuments()
-//     if(total){
-//         res.send({total})
-//     }
-//}
+
 
 
 // ✅ Get Total Number of Bookings
@@ -180,8 +174,16 @@ const TotalBooking = async (req, res) => {
 // this is qaas
 // Function to count total bookings
 
+// display all bookings
+// const TotalBook = async (req, res) => {
+//         const total = await Booking.find().countDocuments()
+//         if (total) {
+//                 res.send({total})
+//         }
+// }
+
 
 
 
 module.exports = { createBooking, getAllBookings, getBookingById, updateBooking,
-   deleteBooking, TotalBooking};
+   deleteBooking, TotalBooking };
