@@ -247,10 +247,21 @@ const updateUser = async (req, res) => {
 
 // display users
 
-const TotalUsers= async(req,res)=>{
-    const total= await  User.find().countDocument()
-    if(total){
-        res.send({total})
-    }
-}
+// const TotalUsers= async(req,res)=>{
+//     const total= await  User.find().countDocument()
+//     if(total){
+//         res.send({total})
+//     }
+// }
+
+const TotalUsers = async (req, res) => {
+  try {
+    const total = await User.find().countDocuments(); 
+    res.status(200).json({ success: true, total });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error fetching total bookings", error: error.message });
+  }
+};
+
+
 module.exports = { CreateUser, CreateLogin, getUser, deleteUser, updateUser , TotalUsers};
