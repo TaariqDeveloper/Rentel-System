@@ -39,6 +39,7 @@ const cors = require("cors");
 const CustomerRouter = require("./Router/CustomerRoute");
 const UserRoute = require("./Router/auth");
 const bookingRoutes = require("./Router/bookingRoutes");
+const contactRoutes = require("./Router/contactRoutes");
 
 const app = express();
 const port = 5000;
@@ -68,7 +69,8 @@ connectDB();
 app.use(CustomerRouter);
 app.use(UserRoute);
 app.use("/allimages", express.static("documents")); // Ensure "documents" folder exists
-app.use("/api", bookingRoutes);
+app.use("/api", contactRoutes);
+app.use(contactRoutes)
 
 // Start server
 app.listen(port, () => {

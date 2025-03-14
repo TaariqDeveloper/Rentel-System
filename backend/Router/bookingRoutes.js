@@ -7,6 +7,7 @@
 // module.exports = router;
 
 
+
 const express = require("express");
 const { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking,TotalBooking } = require("../Controller/bookingController");
 const router = express.Router();
