@@ -365,7 +365,8 @@ const Booking = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-green-500 p-4">
+      <div className="min-h-screen flex items-center justify-center 
+       bg-gradient-to-r from-green-500 bg-[#0a1636] p-4 pt-20 ">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
