@@ -145,7 +145,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import SideNav from "../Sidenav/Sidenav";
+
 import { motion } from "framer-motion";
 import Header from "./../../components/Header/Header";
 

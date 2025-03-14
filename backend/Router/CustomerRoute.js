@@ -1,9 +1,23 @@
+// const express = require("express");
+// const customer = require("../Controller/CustomerControler");
+// const imageUpload = require("../middleware/imageupload");
+
+// const Router = express.Router();
+// Router.post("/create/customer", imageUpload.single("image"), customer.RegisterCustomer)
+
+
+// module.exports = Router;
+
 const express = require("express");
-const customer = require("../Controller/CustomerControler");
+const CustomerController = require("../Controller/CustomerControler");
 const imageUpload = require("../middleware/imageupload");
 
 const Router = express.Router();
-Router.post("/create/customer", imageUpload.single("image"), customer.RegisterCustomer)
-
+Router.post("/customers", imageUpload.single("image"), CustomerController.createCustomer);
+Router.get("/customers", CustomerController.getCustomers);
+Router.get("/customers/:id", CustomerController.getCustomerById);
+Router.put("/customers/:id", imageUpload.single("image"), CustomerController.updateCustomer);
+Router.delete("/customers/:id", CustomerController.deleteCustomer);
 
 module.exports = Router;
+
