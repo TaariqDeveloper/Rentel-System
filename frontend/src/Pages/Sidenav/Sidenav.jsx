@@ -321,8 +321,8 @@ function SideNav() {
           {/* Products */}
           <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
             <FaBox className="text-lg" />
-            <Link to="" className="hover:underline">
-              <span>Products</span>
+            <Link to="/bookingList" className="hover:underline">
+              <span>bookings</span>
             </Link>
           </li>
 
@@ -373,7 +373,7 @@ function SideNav() {
           {/* Customers */}
           <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
             <FaShoppingCart className="text-lg" />
-            <Link to="/customers" className="hover:underline">
+            <Link to="/displayCustomer" className="hover:underline">
               <span>Customers</span>
             </Link>
           </li>

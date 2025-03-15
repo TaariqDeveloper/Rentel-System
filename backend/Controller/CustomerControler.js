@@ -101,7 +101,26 @@ const deleteCustomer = async (req, res) => {
   }
 };
 
-module.exports = { createCustomer, getCustomers, getCustomerById, updateCustomer, deleteCustomer };
+
+
+// const TotalCustomers = async (req, res) => {
+//   try {
+//     const total = await Customer.find().countDocuments();
+//     res.status(200).json({ success: true, total });
+//   } catch (error) {
+//     res.status(500).json({ success: false, message: "Error fetching total Customers", error: error.message });
+//   }
+// };
+const TotalCustomers = async (req, res) => {
+  try {
+    const total = await Customer.find().countDocuments(); // ✅ Corrected
+    res.status(200).json({ success: true, total });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error fetching total customers", error: error.message });
+  }
+};
+
+module.exports = { createCustomer, getCustomers, getCustomerById, updateCustomer, deleteCustomer, TotalCustomers };
 
 
 
