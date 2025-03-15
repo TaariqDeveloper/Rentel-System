@@ -275,9 +275,9 @@ function Login() {
           Login
         </h2>
 
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-4 " onSubmit={handleSubmit}>
           <div className="relative">
-            <label htmlFor="email" className="block text-gray-600 font-medium">
+            <label htmlFor="email" className="block text-white font-medium">
               Email
             </label>
             <i className="fa-solid fa-envelope absolute text-xl text-gray-400 top-[50px] transform -translate-y-1/2 left-3 mt-1"></i>
@@ -294,7 +294,7 @@ function Login() {
           <div className="relative">
             <label
               htmlFor="password"
-              className="block text-gray-600 font-medium"
+              className="block text-white font-medium"
             >
               Password
             </label>
