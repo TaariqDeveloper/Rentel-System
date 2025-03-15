@@ -23,7 +23,7 @@ Router.post("/api/auth/register", userControllers.CreateUser);
 Router.post("/api/auth/Login", userControllers.CreateLogin);
 
 // ✅ Protected Routes (Only Authenticated Users)
-Router.get("/users", isAuthenticated, userControllers.getUser);
+Router.get("/users", userControllers.getUser);
 
 // ✅ Admin-Only Routes
 Router.delete("/users/:id", isAuthenticated, isAdmin, userControllers.deleteUser);
