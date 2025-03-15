@@ -1,71 +1,4 @@
 // import React from "react";
-// function FeaturedPropertyTypes() {
-//   return (
-//     <section className="py-12 bg-gray-100 text-center h-[500px]">
-//       <div className="container mx-auto">
-//         <h2 className="text-3xl font-bold text-gray-800">
-//           Featured Property Types
-//         </h2>
-//         <p className="text-gray-500 mt-2">Find All Type of Property.</p>
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
-//           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-//             <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-red-100">
-//               <span className="text-3xl text-red-500">🏡</span>
-//             </div>
-//             <h3 className="text-lg font-semibold text-gray-700 mt-4">
-//               Family House
-//             </h3>
-//             <p className="text-gray-500">122 Property</p>
-//           </div>
-
-//           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-//             <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-green-100">
-//               <span className="text-3xl text-green-500">🏠</span>
-//             </div>
-//             <h3 className="text-lg font-semibold text-gray-700 mt-4">
-//               House & Villa
-//             </h3>
-//             <p className="text-gray-500">155 Property</p>
-//           </div>
-
-//           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-//             <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-yellow-100">
-//               <span className="text-3xl text-yellow-500">🏢</span>
-//             </div>
-//             <h3 className="text-lg font-semibold text-gray-700 mt-4">
-//               Apartment
-//             </h3>
-//             <p className="text-gray-500">300 Property</p>
-//           </div>
-
-//           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-//             <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-purple-100">
-//               <span className="text-3xl text-purple-500">🏬</span>
-//             </div>
-//             <h3 className="text-lg font-semibold text-gray-700 mt-4">
-//               Office & Studio
-//             </h3>
-//             <p className="text-gray-500">80 Property</p>
-//           </div>
-
-//           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-//             <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100">
-//               <span className="text-3xl text-blue-500">🏛️</span>
-//             </div>
-//             <h3 className="text-lg font-semibold text-gray-700 mt-4">
-//               Villa & Condo
-//             </h3>
-//             <p className="text-gray-500">80 Property</p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default FeaturedPropertyTypes;
-
-// import React from "react";
 // import { motion } from "framer-motion";
 
 // function FeaturedPropertyTypes() {
@@ -78,7 +11,7 @@
 //           animate={{ opacity: 1, y: 0 }}
 //           transition={{ duration: 0.8 }}
 //         >
-//           Featured Property Types
+//           Noocyada Guryaha ee Soomaaliya
 //         </motion.h2>
 //         <motion.p
 //           className="text-gray-500 mt-2"
@@ -86,7 +19,7 @@
 //           animate={{ opacity: 1 }}
 //           transition={{ delay: 0.3, duration: 1 }}
 //         >
-//           Find All Type of Property.
+//           Ka hel dhammaan noocyada guryaha Soomaaliya.
 //         </motion.p>
 //         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
 //           {[
@@ -94,36 +27,36 @@
 //               icon: "🏡",
 //               color: "red-500",
 //               bg: "red-100",
-//               title: "Family House",
-//               count: "122 Property",
+//               title: "Guri Dabaq ah",
+//               count: "45 Guryo",
 //             },
 //             {
 //               icon: "🏠",
 //               color: "green-500",
 //               bg: "green-100",
-//               title: "House & Villa",
-//               count: "155 Property",
+//               title: "Guri Dhisme Cusub",
+//               count: "85 Guryo",
 //             },
 //             {
 //               icon: "🏢",
 //               color: "yellow-500",
 //               bg: "yellow-100",
-//               title: "Apartment",
-//               count: "300 Property",
+//               title: "Apartment Muqdisho",
+//               count: "200 Guryo",
 //             },
 //             {
 //               icon: "🏬",
 //               color: "purple-500",
 //               bg: "purple-100",
-//               title: "Office & Studio",
-//               count: "80 Property",
+//               title: "Xafiisyo Ganacsi",
+//               count: "60 Xafiis",
 //             },
 //             {
-//               icon: "🏛️",
+//               icon: "🏖️",
 //               color: "blue-500",
 //               bg: "blue-100",
-//               title: "Villa & Condo",
-//               count: "80 Property",
+//               title: "Guryo Xeebeed",
+//               count: "30 Guryo",
 //             },
 //           ].map((item, index) => (
 //             <motion.div
@@ -155,17 +88,141 @@
 //   );
 // }
 
-// export default FeaturedPropertyTypes;
+// export default FeaturedPropertyTypimport React from "react";
 
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
+import { FaBath, FaBed, FaExpand, FaHeart, FaPlusCircle } from "react-icons/fa";
+import image1 from "../../Assets/image1.jpg";
+import image2 from "../../Assets/image2.jpg";
+import image3 from "../../Assets/image3.jpg";
+import image4 from "../../Assets/image4.jpg";
+import image5 from "../../Assets/image5.jpg";
+import image6 from "../../Assets/image6.jpg";
 
-function FeaturedPropertyTypes() {
+const listings = [
+  {
+    id: 1,
+    title: "New Apartment Nice View",
+    price: "$149/Month",
+    location: "Chicago",
+    image: image1,
+    bedrooms: 3,
+    bathrooms: 2,
+    size: 3450,
+    status: "FOR RENT",
+    statusColor: "bg-green-500",
+  },
+  {
+    id: 2,
+    title: "Citra Puri Los Angles Living",
+    price: "$215/Month",
+    location: "Chicago",
+    image: image2,
+    bedrooms: 3,
+    bathrooms: 2,
+    size: 3450,
+    status: "FOR RENT",
+    statusColor: "bg-green-500",
+  },
+  {
+    id: 3,
+    title: "Citra Puri Los Angles Living",
+    price: "$225/Month",
+    location: "Chicago",
+    image: image3,
+    bedrooms: 3,
+    bathrooms: 2,
+    size: 3450,
+    status: "FOR SALE",
+    statusColor: "bg-red-500",
+  },
+  {
+    id: 4,
+    title: "Luxury Beach House",
+    price: "$500/Month",
+    location: "Miami",
+    image: image4,
+    bedrooms: 4,
+    bathrooms: 3,
+    size: 5000,
+    status: "FOR RENT",
+    statusColor: "bg-green-500",
+  },
+  {
+    id: 5,
+    title: "Modern City Loft",
+    price: "$350/Month",
+    location: "New York",
+    image: image5,
+    bedrooms: 2,
+    bathrooms: 1,
+    size: 2000,
+    status: "FOR SALE",
+    statusColor: "bg-red-500",
+  },
+  {
+    id: 6,
+    title: "Spacious Countryside House",
+    price: "$400/Month",
+    location: "Texas",
+    image: image6,
+    bedrooms: 5,
+    bathrooms: 4,
+    size: 4500,
+    status: "FOR RENT",
+    statusColor: "bg-green-500",
+  },
+];
+
+const propertyTypes = [
+  {
+    icon: "🏡",
+    color: "red-500",
+    bg: "red-100",
+    title: "Guri Dabaq ah",
+    count: "45 Guryo",
+  },
+  {
+    icon: "🏠",
+    color: "green-500",
+    bg: "green-100",
+    title: "Guri Dhisme Cusub",
+    count: "85 Guryo",
+  },
+  {
+    icon: "🏢",
+    color: "yellow-500",
+    bg: "yellow-100",
+    title: "Apartment Muqdisho",
+    count: "200 Guryo",
+  },
+  {
+    icon: "🏬",
+    color: "purple-500",
+    bg: "purple-100",
+    title: "Xafiisyo Ganacsi",
+    count: "60 Xafiis",
+  },
+  {
+    icon: "🏖️",
+    color: "blue-500",
+    bg: "blue-100",
+    title: "Guryo Xeebeed",
+    count: "30 Guryo",
+  },
+];
+
+const FeaturedPropertyTypes = () => {
   return (
-    <section className="py-12 bg-gray-100 text-center h-[500px]">
-      <div className="container mx-auto">
+    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-12">
+      {/* Property Types Section */}
+      <section className="py-12 bg-gray-100 text-center">
         <motion.h2
-          className="text-3xl font-bold text-gray-800"
+          className="text-4xl font-bold text-gray-900 tracking-wide"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -173,7 +230,7 @@ function FeaturedPropertyTypes() {
           Noocyada Guryaha ee Soomaaliya
         </motion.h2>
         <motion.p
-          className="text-gray-500 mt-2"
+          className="text-lg text-gray-600 mt-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
@@ -181,70 +238,106 @@ function FeaturedPropertyTypes() {
           Ka hel dhammaan noocyada guryaha Soomaaliya.
         </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
-          {[
-            {
-              icon: "🏡",
-              color: "red-500",
-              bg: "red-100",
-              title: "Guri Dabaq ah",
-              count: "45 Guryo",
-            },
-            {
-              icon: "🏠",
-              color: "green-500",
-              bg: "green-100",
-              title: "Guri Dhisme Cusub",
-              count: "85 Guryo",
-            },
-            {
-              icon: "🏢",
-              color: "yellow-500",
-              bg: "yellow-100",
-              title: "Apartment Muqdisho",
-              count: "200 Guryo",
-            },
-            {
-              icon: "🏬",
-              color: "purple-500",
-              bg: "purple-100",
-              title: "Xafiisyo Ganacsi",
-              count: "60 Xafiis",
-            },
-            {
-              icon: "🏖️",
-              color: "blue-500",
-              bg: "blue-100",
-              title: "Guryo Xeebeed",
-              count: "30 Guryo",
-            },
-          ].map((item, index) => (
+          {propertyTypes.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md transition 
-              transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer"
+              className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer transition-all"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1, transition: { duration: 0.3 } }}
-              transition={{ delay: index * 0.3, duration: 0.6 }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
             >
               <motion.div
                 className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-${item.bg} transition-transform duration-300`}
                 whileHover={{ rotate: 10 }}
               >
-                <span className={`text-3xl text-${item.color}`}>
+                <span className={`text-4xl text-${item.color}`}>
                   {item.icon}
                 </span>
               </motion.div>
-              <h3 className="text-lg font-semibold text-gray-700 mt-4">
+              <h3 className="text-xl font-semibold text-gray-800 mt-4">
                 {item.title}
               </h3>
-              <p className="text-gray-500">{item.count}</p>
+              <p className="text-base text-gray-500">{item.count}</p>
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Featured Listings Section */}
+      <section className="relative mt-12">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-10 tracking-wide">
+          Featured Listings
+        </h2>
+        <div className="relative">
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".custom-swiper-button-next",
+              prevEl: ".custom-swiper-button-prev",
+            }}
+            modules={[Navigation]}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="relative"
+          >
+            {listings.map((listing) => (
+              <SwiperSlide key={listing.id} className="p-4">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl">
+                  <div className="relative">
+                    <img
+                      src={listing.image}
+                      alt={listing.title}
+                      className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                    <div
+                      className={`absolute top-3 right-3 text-white text-xs font-bold px-3 py-1 rounded-lg ${listing.statusColor}`}
+                    >
+                      {listing.status}
+                    </div>
+                    <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
+                      📍 {listing.location}
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xl font-bold text-red-500">
+                      {listing.price}
+                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-all duration-300">
+                      {listing.title}
+                    </h3>
+                    <div className="flex items-center gap-4 mt-2 text-gray-600 text-base">
+                      <span className="flex items-center gap-1">
+                        <FaBed /> {listing.bedrooms} Beds
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <FaBath /> {listing.bathrooms} Baths
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <FaExpand /> {listing.size} Sq Ft
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Custom Navigation Buttons - Outside the boxes */}
+          <button className="custom-swiper-button-prev absolute top-1/2 left-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
+            ←
+          </button>
+          <button className="custom-swiper-button-next absolute top-1/2 right-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
+            →
+          </button>
+        </div>
+      </section>
+    </div>
   );
-}
+};
 
 export default FeaturedPropertyTypes;

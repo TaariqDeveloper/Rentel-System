@@ -202,7 +202,6 @@
 
 // export default RecentPropertyListed;
 
-
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -240,7 +239,7 @@ function RecentPropertyListed() {
             (image, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden 
+                className="bg-white rounded-lg shadow-lg overflow-hidden
                 transition transform duration-500 hover:scale-110 hover:shadow-2xl
                  cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
@@ -295,4 +294,3 @@ function RecentPropertyListed() {
 }
 
 export default RecentPropertyListed;
-
