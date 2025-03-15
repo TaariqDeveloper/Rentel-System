@@ -153,7 +153,8 @@ function Header() {
             </ul>
           </nav>
           <div>
-            <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition animate-pulse">
+            <button className="bg-green-500 text-white px-5 py-2 rounded-lg 
+            shadow-md hover:bg-yellow-500 transition animate-pulse">
               <Link to="/login">Login</Link>
             </button>
           </div>
@@ -183,7 +184,7 @@ function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex lg:items-center lg:space-x-6">
-          <ul className="flex space-x-6 text-lg font-medium">
+          <ul className="flex space-x-6 text-lg font-medium  animate-pulse">
             <li>
               <Link to="/" className="text-yellow-500 hover:text-green-500 transition">
                 Home
@@ -214,7 +215,8 @@ function Header() {
 
         {/* Login Button (Desktop) */}
         <div className="hidden lg:block">
-          <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
+          <button className="bg-green-500 text-white px-5 py-2 rounded-lg
+           shadow-md hover:bg-yellow-500 transition  animate-pulse">
             <Link to="/login">Login</Link>
           </button>
         </div>
@@ -250,7 +252,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition w-full">
+              <button className="bg-green-500 text-white px-5 py-2 
+              rounded-lg shadow-md hover:bg-yellow-500 transition">
                 <Link to="/login">Login</Link>
               </button>
             </li>

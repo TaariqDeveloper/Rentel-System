@@ -546,7 +546,7 @@ function Signup() {
             className={`w-full text-white py-3 rounded-md transition duration-300 ${
               loading
                 ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600"
+                : "bg-yellow-500 hover:bg-yellow-500"
             }`}
           >
             {loading ? "Signing up..." : "Signup"}
