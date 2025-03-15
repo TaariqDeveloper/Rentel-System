@@ -71,7 +71,7 @@ app.use("/api", bookingRoutes);
 app.use("/api" ,CustomerRouter);
 app.use(UserRoute);
 // app.use("/allimages", express.static("documents")); // Ensure "documents" folder exists
-app.use("/uploads", express.static("uploads")); 
+app.use("/document", express.static("document")); 
 app.use("/api", contactRoutes);
 app.use(contactRoutes)
 
