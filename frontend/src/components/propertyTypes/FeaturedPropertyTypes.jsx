@@ -96,12 +96,12 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import { FaBath, FaBed, FaExpand, FaHeart, FaPlusCircle } from "react-icons/fa";
-import image1 from "../../Assets/image1.jpg";
-import image2 from "../../Assets/image2.jpg";
-import image3 from "../../Assets/image3.jpg";
-import image4 from "../../Assets/image4.jpg";
-import image5 from "../../Assets/image5.jpg";
-import image6 from "../../Assets/image6.jpg";
+import image1 from "../../Assets/feature1.jpg";
+import image2 from "../../Assets/feature2.jpg";
+import image3 from "../../Assets/feature3.jpg";
+import image4 from "../../Assets/feature4.jpg";
+import image5 from "../../Assets/feature5.jpg";
+import image6 from "../../Assets/feature6.jpg";
 
 const listings = [
   {
