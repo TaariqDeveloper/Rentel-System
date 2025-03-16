@@ -192,8 +192,9 @@ function Footer() {
           "Home Page",
           "About Page",
           "Service Page",
+          "Booking page",
           "Contact Page",
-          "Single Blog",
+         
         ].map((item, index) => (
           <li
             key={index}
