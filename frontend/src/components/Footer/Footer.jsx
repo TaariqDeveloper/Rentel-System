@@ -127,7 +127,7 @@ function Footer() {
         <i className="fa-regular fa-square-caret-up text-green-500 mr-2"></i>
         Rent House
       </h1>
-      <h1 className="text-white text-2xl md:text-3xl mt-4">
+      <h1 className="text-yellow-500 text-2xl md:text-3xl mt-4">
         Do You Need Help With Anything?
       </h1>
       <p className="text-gray-400 mt-4">
@@ -153,33 +153,33 @@ function Footer() {
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-yellow-500 transition duration-300"
+          className="text-yellow-500 hover:text-[#624d1d] transition duration-300"
         >
-          <i className="fab fa-facebook text-2xl"></i>
+          <i className="fab fa-facebook text-2xl shadow-lg shadow-white rounded-2xl"></i>
         </a>
         <a
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-yellow-500 transition duration-300"
+          className="text-yellow-500 hover:text-[#624d1d] transition duration-300"
         >
-          <i className="fab fa-twitter text-2xl"></i>
+          <i className="fab fa-twitter text-2xl shadow-lg shadow-white rounded-2xl"></i>
         </a>
         <a
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-yellow-500 transition duration-300"
+          className="text-yellow-500 hover:text-[#624d1d] transition duration-300"
         >
-          <i className="fab fa-instagram text-2xl"></i>
+          <i className="fab fa-instagram text-2xl shadow-lg shadow-white rounded-2xl"></i>
         </a>
         <a
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-yellow-500 transition duration-300"
+          className="text-yellow-500 hover:text-[#624d1d] transition duration-300"
         >
-          <i className="fab fa-linkedin text-2xl"></i>
+          <i className="fab fa-linkedin text-2xl shadow-lg shadow-white rounded-2xl"></i>
         </a>
       </div>
     </div>

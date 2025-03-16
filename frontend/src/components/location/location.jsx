@@ -179,14 +179,16 @@ function Location() {
   </motion.h1>
 
   <motion.p
-    className="text-center text-gray-500 mt-4 sm:mt-6 text-base sm:text-lg md:text-[19px]"
+    className="text-center text-gray-500 font-serif  mt-4 sm:mt-6 text-base sm:text-lg md:text-[19px]"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor<br className="hidden sm:block" />
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    Discover the perfect destination for your next adventure or dream home.
+     Whether you're looking .<br className="hidden sm:block" />for a bustling city, a serene countryside, 
+  
+    
+  
   </motion.p>
 
   <div className="px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-center">

@@ -226,13 +226,12 @@ function RecentPropertyListed() {
         Recent Property Listed
       </motion.h2>
       <motion.p
-        className="text-gray-500 mt-2 sm:mt-4 text-base sm:text-lg md:text-xl pt-2 sm:pt-4"
+        className="text-gray-500 mt-2 font-serif   text-wrap  sm:mt-4 text-base sm:text-lg md:text-xl pt-2 sm:pt-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 1 }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        This stunning property offers a perfect blend of modern design and comfort, <br></br>ideal for families and professionals alike.
       </motion.p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12">
         {[image1, image2, image3, image4, image5, image6].map((image, index) => (
