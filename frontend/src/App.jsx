@@ -81,7 +81,6 @@ function App() {
         <Route path="/ContactForm" element={<ContactForm />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/register" element={<Signup />} />
-<<<<<<< HEAD
         <Route path="/Login" element={<Login />} />
         <Route path="/UserList" element={<UserList />} />
         <Route path="/booking" element={<Booking />} />
@@ -90,8 +89,7 @@ function App() {
         <Route path="/addCustomer" element={<AddCustomer />} />
         <Route path="/order" element={<OrdersPage />} />
         <Route path="/displayCustomer" element={<CustomerDisplay />} />
-       
-=======
+      
         <Route path="/login" element={<Login />} />
 
         {/* Protected Routes (Require Login) */}
@@ -151,7 +149,7 @@ function App() {
             </ProtectedRoute>
           }
         />
->>>>>>> 4423ec311521709c4ccf1a75b11b848a143eb139
+
       </Routes>
     </div>
   );
