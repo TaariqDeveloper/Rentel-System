@@ -57,7 +57,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About";
 import Service from "./Pages/Service";
 import ContactForm from "./Pages/Contect/ContactForm";
-import Signup from "./Pages/Signup/Signup";
+// import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
 import UserList from "./Pages/userList/UserList";
@@ -79,9 +79,8 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/ContactForm" element={<ContactForm />} />
         <Route path="/booking" element={<Booking />} />
-        <Route path="/register" element={<Signup />} />
+        {/* <Route path="/register" element={<Signup />} /> */}
         <Route path="/login" element={<Login />} />
-
         {/* Protected Routes (Require Login) */}
         <Route
           path="/dashboard"
