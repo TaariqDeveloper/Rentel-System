@@ -305,76 +305,76 @@ const FeaturedPropertyTypes = () => {
 
       {/* Featured Listings Section */}
       <section className="relative mt-12">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-10 tracking-wide">
-          Featured Listings
-        </h2>
-        <div className="relative">
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            navigation={{
-              nextEl: ".custom-swiper-button-next",
-              prevEl: ".custom-swiper-button-prev",
-            }}
-            modules={[Navigation]}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="relative"
-          >
-            {listings.map((listing) => (
-              <SwiperSlide key={listing.id} className="p-4">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl">
-                  <div className="relative">
-                    <img
-                      src={listing.image}
-                      alt={listing.title}
-                      className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
-                    />
-                    <div
-                      className={`absolute top-3 right-3 text-white text-xs font-bold px-3 py-1 rounded-lg ${listing.statusColor}`}
-                    >
-                      {listing.status}
-                    </div>
-                    <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
-                      📍 {listing.location}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xl font-bold text-red-500">
-                      {listing.price}
-                    </p>
-                    <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-all duration-300">
-                      {listing.title}
-                    </h3>
-                    <div className="flex items-center gap-4 mt-2 text-gray-600 text-base">
-                      <span className="flex items-center gap-1">
-                        <FaBed /> {listing.bedrooms} Beds
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <FaBath /> {listing.bathrooms} Baths
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <FaExpand /> {listing.size} Sq Ft
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-6 md:mb-10 tracking-wide">
+    Featured Listings
+  </h2>
+  <div className="relative">
+    <Swiper
+      spaceBetween={20}
+      slidesPerView={1}
+      navigation={{
+        nextEl: ".custom-swiper-button-next",
+        prevEl: ".custom-swiper-button-prev",
+      }}
+      modules={[Navigation]}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      className="relative"
+    >
+      {listings.map((listing) => (
+        <SwiperSlide key={listing.id} className="p-2 md:p-4">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl">
+            <div className="relative">
+              <img
+                src={listing.image}
+                alt={listing.title}
+                className="w-full h-48 md:h-64 object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div
+                className={`absolute top-3 right-3 text-white text-xs font-bold px-3 py-1 rounded-lg ${listing.statusColor}`}
+              >
+                {listing.status}
+              </div>
+              <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
+                📍 {listing.location}
+              </div>
+            </div>
+            <div className="p-4 md:p-5">
+              <p className="text-xl font-bold text-red-500">
+                {listing.price}
+              </p>
+              <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-all duration-300">
+                {listing.title}
+              </h3>
+              <div className="flex items-center gap-4 mt-2 text-gray-600 text-base">
+                <span className="flex items-center gap-1">
+                  <FaBed /> {listing.bedrooms} Beds
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaBath /> {listing.bathrooms} Baths
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaExpand /> {listing.size} Sq Ft
+                </span>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
-          {/* Custom Navigation Buttons - Outside the boxes */}
-          <button className="custom-swiper-button-prev absolute top-1/2 left-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
-            ←
-          </button>
-          <button className="custom-swiper-button-next absolute top-1/2 right-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
-            →
-          </button>
-        </div>
-      </section>
+    {/* Custom Navigation Buttons - Outside the boxes */}
+    <button className="custom-swiper-button-prev absolute top-1/2 left-[-20px] md:left-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
+      ←
+    </button>
+    <button className="custom-swiper-button-next absolute top-1/2 right-[-20px] md:right-[-40px] transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 transition-all z-10">
+      →
+    </button>
+  </div>
+</section>
     </div>
   );
 };
