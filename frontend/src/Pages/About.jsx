@@ -91,8 +91,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import image from "../images/p-4.png";
-import newImage from "../Assets/About1.png";
-import image1 from "../images/abou1.jpg";
+// import newImage from "../Assets/About1.png";
+import image1 from "../images/aboutt.jpg";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
