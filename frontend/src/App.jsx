@@ -16,6 +16,7 @@ import AddCustomer from "./Pages/AddCustomer/AddCustomer";
 import OrdersPage from "./Pages/OrdersPage/OrdersPage";
 import CustomerDisplay from "./Pages/CustomerDisplay/CustomerDisplay";
 
+
 function App() {
   return (
     <div>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/addCustomer" element={<AddCustomer />} />
         <Route path="/order" element={<OrdersPage />} />
         <Route path="/displayCustomer" element={<CustomerDisplay />} />
+       
       </Routes>
     </div>
   );
