@@ -92,7 +92,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+// import image from "../";
 function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,72 +102,15 @@ function Header() {
   };
   return (
     <div>
-      {/* <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          <h1 className="text-3xl font-bold text-green-500">
-            <i className="fa-regular fa-square-caret-up text-yellow-500 mr-2"></i>
-            Rental House
-          </h1>
-          <nav>
-            <ul className="flex space-x-6 text-lg font-medium animate-pulse">
-              <li>
-                <Link
-                  to="/"
-                  className="text-yellow-500 hover:text-green-500 transition"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/service"
-                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/booking"
-                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
-                >
-                  Booking
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/ContactForm"
-                  className="text-gray-700 hover:text-yellow-500 transition hover:underline"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <button className="bg-green-500 text-white px-5 py-2 rounded-lg 
-            shadow-md hover:bg-yellow-500 transition animate-pulse">
-              <Link to="/login">Login</Link>
-            </button>
-          </div>
-        </div>
-      </header> */}
+     
 
 
 <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <h1 className="text-3xl font-bold text-green-500">
-          <i className="fa-regular fa-square-caret-up text-yellow-500 mr-2"></i>
-          Rental House
+         <i class="fa-solid fa-house-medical-circle-check text-yellow-500 mr-2 "></i>
+       Rental House
         </h1>
 
         {/* Mobile Menu Toggle Button */}
@@ -217,7 +160,7 @@ function Header() {
         <div className="hidden lg:block">
           <button className="bg-green-500 text-white px-5 py-2 rounded-lg
            shadow-md hover:bg-yellow-500 transition  animate-pulse">
-            <Link to="/login">Login</Link>
+            <Link to="/login">Login</Link> <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
           </button>
         </div>
       </div>

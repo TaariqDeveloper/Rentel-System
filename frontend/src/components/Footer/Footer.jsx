@@ -198,7 +198,7 @@ function Footer() {
         ].map((item, index) => (
           <li
             key={index}
-            className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+            className="mt-4  text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
           >
             {item}
           </li>
@@ -215,7 +215,7 @@ function Footer() {
         ].map((item, index) => (
           <li
             key={index}
-            className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+            className="mt-4 ml-8 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
           >
             {item}
           </li>
@@ -227,7 +227,8 @@ function Footer() {
           (item, index) => (
             <li
               key={index}
-              className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+              className="mt-4  ml-8 text-center md:text-left
+               hover:text-yellow-500 transition duration-300 cursor-pointer"
             >
               {item}
             </li>
