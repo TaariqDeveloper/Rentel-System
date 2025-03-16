@@ -204,7 +204,7 @@ function Footer() {
         {/* Footer Bottom */}
         <hr className="w-full bg-white mt-10 opacity-20" />
         <p className="text-gray-400 mt-8 text-center">
-          © 2025 HouseHub. Designed By Sprinaa.
+          © 2025 HouseHub. Designed By Sprinaa &Moha.
         </p>
       </div>
     </div>
