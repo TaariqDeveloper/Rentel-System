@@ -135,7 +135,7 @@ function About() {
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
         Our Agency Story
       </h1>
-      <p className="text-gray-400 mt-4 sm:mt-6">
+      <p className="text-yellow-500 mt-4 sm:mt-6">
         Check out our company story and work process
       </p>
       <p className="mt-4 sm:mt-6 leading-6 sm:leading-8">
