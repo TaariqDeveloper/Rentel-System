@@ -102,50 +102,59 @@ function Service() {
     <div>
       <Header />
 
-      {/* Hero Section */}
+  {/* Hero Section */}
+<motion.div
+  className="relative bg-cover bg-center flex flex-col justify-center items-center text-white pt-16 sm:pt-20 w-full h-64 sm:h-80"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+  <img
+    className="w-full h-64 sm:h-80 object-cover"
+    src={image}
+    alt="Services"
+  />
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <motion.div
+    className="absolute left-4 sm:left-10 md:left-20 lg:ml-40 pt-8 text-center sm:text-left"
+    initial={{ x: -50, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 1 }}
+  >
+    <h1 className="text-lg sm:text-xl mt-3 text-yellow-500">Services</h1>
+    <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 sm:mt-5 font-bold">
+      Services - All Services
+    </p>
+  </motion.div>
+</motion.div>
+
+{/* Services Section */}
+<div className="mt-8 sm:mt-10 pt-8 sm:pt-12 md:pt-16 lg:pt-20 px-4 sm:px-6 md:px-8 lg:px-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
+  <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+    {services.map((service, index) => (
       <motion.div
-        className="relative bg-cover bg-center flex flex-col justify-center items-center text-white pt-20 w-full h-80"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        key={index}
+        className="bg-white w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px] h-[140px] sm:h-[150px] md:h-[160px] lg:h-[180px] shadow-lg shadow-gray-400/50 rounded-lg text-center p-3 sm:p-4 flex flex-col items-center justify-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+        whileHover={{ scale: 1.05 }}
       >
-        <img className="w-full h-80 object-cover" src={image} alt="Services" />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <motion.div
-          className="absolute left-0 ml-40 pt-8"
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="text-xl mt-3 text-yellow-500">Services</h1>
-          <p className="text-5xl mt-5 font-bold">Services - All Services</p>
-        </motion.div>
+        <img
+          className="w-[50px] sm:w-[60px] md:w-[70px] lg:w-[80px] h-[50px] sm:h-[60px] md:h-[70px] lg:h-[80px]"
+          src={service.img}
+          alt={service.title}
+        />
+        <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mt-2 sm:mt-3">
+          {service.title}
+        </h1>
+        <p className="text-xs sm:text-sm md:text-base text-gray-400">
+          {service.properties}
+        </p>
       </motion.div>
-
-      {/* Services Section */}
-      <div className="mt-10 pt-20 px-10 pb-20">
-        <div className="flex flex-wrap justify-center gap-10">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-white w-[200px] h-[180px] shadow-lg shadow-gray-400/50 rounded-lg text-center p-4 flex flex-col items-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                className="w-[80px] h-[80px] mt-2"
-                src={service.img}
-                alt={service.title}
-              />
-              <h1 className="text-xl font-semibold mt-3">{service.title}</h1>
-              <p className="text-gray-400">{service.properties}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
+    ))}
+  </div>
+</div>
       <Footer />
     </div>
   );
