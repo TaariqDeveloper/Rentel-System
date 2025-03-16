@@ -184,8 +184,8 @@ function Location() {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
   >
-    Discover the perfect destination for your next adventure or dream home.
-     Whether you're looking .<br className="hidden sm:block" />for a bustling city, a serene countryside, 
+    Discover the perfect destination for your next  dream home.
+     Whether you're looking for a bustling city, a serene countryside, 
   
     
   

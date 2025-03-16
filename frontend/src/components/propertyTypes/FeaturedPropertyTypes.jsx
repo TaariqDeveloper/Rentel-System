@@ -108,7 +108,7 @@ const listings = [
     id: 1,
     title: "New Apartment Nice View",
     price: "$149/Month",
-    location: "Chicago",
+    location: "Hodan",
     image: image1,
     bedrooms: 3,
     bathrooms: 2,
@@ -120,7 +120,7 @@ const listings = [
     id: 2,
     title: "Citra Puri Los Angles Living",
     price: "$215/Month",
-    location: "Chicago",
+    location: "Wadajir",
     image: image2,
     bedrooms: 3,
     bathrooms: 2,
@@ -132,19 +132,19 @@ const listings = [
     id: 3,
     title: "Citra Puri Los Angles Living",
     price: "$225/Month",
-    location: "Chicago",
+    location: "warta",
     image: image3,
     bedrooms: 3,
     bathrooms: 2,
     size: 3450,
     status: "FOR SALE",
-    statusColor: "bg-red-500",
+    statusColor: "bg-yellow-500",
   },
   {
     id: 4,
     title: "Luxury Beach House",
     price: "$500/Month",
-    location: "Miami",
+    location: "Hodan",
     image: image4,
     bedrooms: 4,
     bathrooms: 3,
@@ -156,19 +156,19 @@ const listings = [
     id: 5,
     title: "Modern City Loft",
     price: "$350/Month",
-    location: "New York",
+    location: "Karan",
     image: image5,
     bedrooms: 2,
     bathrooms: 1,
     size: 2000,
     status: "FOR SALE",
-    statusColor: "bg-red-500",
+    statusColor: "bg-yellow-500",
   },
   {
     id: 6,
     title: "Spacious Countryside House",
     price: "$400/Month",
-    location: "Texas",
+    location: "Kaxda",
     image: image6,
     bedrooms: 5,
     bathrooms: 4,
@@ -331,22 +331,25 @@ const FeaturedPropertyTypes = () => {
               <img
                 src={listing.image}
                 alt={listing.title}
-                className="w-full h-48 md:h-64 object-cover transition-transform duration-300 hover:scale-105"
+                className="w-full h-48 md:h-64 object-cover transition-transform 
+                duration-300 hover:scale-105"
               />
               <div
-                className={`absolute top-3 right-3 text-white text-xs font-bold px-3 py-1 rounded-lg ${listing.statusColor}`}
+                className={`absolute top-3 right-3 text-white 
+                  text-xs font-bold px-3 py-1 rounded-lg ${listing.statusColor}`}
               >
                 {listing.status}
               </div>
-              <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
+              <div className="absolute bottom-3 left-3 bg-black/60 text-white
+               text-xs px-2 py-1 rounded-md">
                 📍 {listing.location}
               </div>
             </div>
             <div className="p-4 md:p-5">
-              <p className="text-xl font-bold text-red-500">
+              <p className="text-xl font-bold text-yellow-500">
                 {listing.price}
               </p>
-              <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 hover:text-green-500 transition-all duration-300">
                 {listing.title}
               </h3>
               <div className="flex items-center gap-4 mt-2 text-gray-600 text-base">
