@@ -99,114 +99,149 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      {/* Top Section */}
-      <div className="bg-green-500 w-full mt-10 py-10 px-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <div>
-          <h1 className="text-5xl text-white font-bold pb-3">
-            Do You Have Questions ?
-          </h1>
-          <p className="text-white text-xl">
-            We'll help you to grow your career and growth.
-          </p>
-        </div>
-        <div className="mt-6">
-       <Link to="/"></Link>   <button className="bg-white text-green-500 px-6 py-3 
-          rounded-full text-xl shadow-lg hover:bg-yellow-500 transition duration-300">
-            Contact Us Today
-          </button>
-        </div>
+     {/* Top Section */}
+<div className="bg-green-500 w-full mt-10 py-10 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+  <div>
+    <h1 className="text-3xl md:text-5xl text-white font-bold pb-3">
+      Do You Have Questions ?
+    </h1>
+    <p className="text-white text-lg md:text-xl">
+      We'll help you to grow your career and growth.
+    </p>
+  </div>
+  <div className="mt-6 md:mt-0">
+    <Link to="/">
+      <button className="bg-white text-green-500 px-6 py-3 rounded-full text-lg md:text-xl shadow-lg hover:bg-yellow-500 transition duration-300">
+        Contact Us Today
+      </button>
+    </Link>
+  </div>
+</div>
+
+{/* Footer Content */}
+<div className="bg-[#0a1636] px-4 md:px-20 py-20">
+  <div className="flex flex-col lg:flex-row gap-10 lg:gap-40">
+    {/* Subscribe Section */}
+    <div>
+      <h1 className="text-white text-3xl md:text-4xl font-bold flex items-center">
+        <i className="fa-regular fa-square-caret-up text-green-500 mr-2"></i>
+        Rent House
+      </h1>
+      <h1 className="text-white text-2xl md:text-3xl mt-4">
+        Do You Need Help With Anything?
+      </h1>
+      <p className="text-gray-400 mt-4">
+        Receive updates, hot deals, tutorials, discounts sent straight to
+        your inbox every month.
+      </p>
+      <div className="mt-6 flex flex-col md:flex-row items-center gap-2">
+        <input
+          className="w-full md:w-80 border-none px-6 py-3 rounded-lg"
+          type="text"
+          placeholder="Email Address"
+        />
+        <button className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition duration-300">
+          Subscribe
+        </button>
       </div>
 
-      {/* Footer Content */}
-      <div className="bg-[#0a1636] px-10 md:px-20 py-20">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-40">
-          {/* Subscribe Section */}
-          <div>
-            <h1 className="text-white text-4xl font-bold flex items-center">
-              <i className="fa-regular fa-square-caret-up text-green-500 mr-2"></i>
-              Rent House
-            </h1>
-            <h1 className="text-white text-3xl mt-4">
-              Do You Need Help With Anything?
-            </h1>
-            <p className="text-gray-400 mt-4">
-              Receive updates, hot deals, tutorials, discounts sent straight to
-              your inbox every month.
-            </p>
-            <div className="mt-6 flex items-center gap-2">
-              <input
-                className="w-80 border-none px-6 py-3 rounded-lg"
-                type="text"
-                placeholder="Email Address"
-              />
-              <button className="bg-green-500 text-white px-6 py-3 rounded-lg 
-              shadow-lg hover:bg-yellow-500 transition duration-300">
-                Subscribe
-              </button>
-            </div>
-          </div>
 
-          {/* Footer Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-400">
-            <ul>
-              <h1 className="text-white text-2xl font-bold">LAYOUTS</h1>
-              {[
-                "Home Page",
-                "About Page",
-                "Service Page",
-                "Contact Page",
-                "Single Blog",
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className="mt-4 text-center md:text-left hover:text-yellow-500 
-                  transition duration-300 cursor-pointer  ml-4"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <h1 className="text-white text-2xl font-bold">ALLSECTIONS</h1>
-              {[
-                "Headers",
-                "Features",
-                "Attractive",
-                "Testimonials",
-                "Videos",
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className="mt-4 text-center md:text-left
-                   hover:text-yellow-500 transition duration-300 cursor-pointer ml-10"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <h1 className="text-white text-2xl font-bold">COMPANY</h1>
-              {["About", "Blog", "Pricing", "Affiliate", "Login"].map(
-                (item, index) => (
-                  <li
-                    key={index}
-                    className="mt-4 text-center md:text-left hover:text-yellow-500 
-                    transition duration-300 cursor-pointer  ml-8"
-                  >
-                    {item}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-        </div>
 
-        {/* Footer Bottom */}
-        <hr className="w-full bg-white mt-10 opacity-20" />
-        <p className="text-gray-400 mt-8 text-center">
-          © 2025 HouseHub. Designed By Sprinaa &Moha.
-        </p>
+       {/* Social Media Icons */}
+       <div className="mt-8 flex gap-4 justify-center md:justify-start">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-yellow-500 transition duration-300"
+        >
+          <i className="fab fa-facebook text-2xl"></i>
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-yellow-500 transition duration-300"
+        >
+          <i className="fab fa-twitter text-2xl"></i>
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-yellow-500 transition duration-300"
+        >
+          <i className="fab fa-instagram text-2xl"></i>
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-yellow-500 transition duration-300"
+        >
+          <i className="fab fa-linkedin text-2xl"></i>
+        </a>
       </div>
+    </div>
+
+    {/* Footer Links */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-400">
+      <ul>
+        <h1 className="text-white text-2xl font-bold sm:text-left text-center">LAYOUTS</h1>
+        {[
+          "Home Page",
+          "About Page",
+          "Service Page",
+          "Contact Page",
+          "Single Blog",
+        ].map((item, index) => (
+          <li
+            key={index}
+            className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        <h1 className="text-white text-2xl font-bold sm:text-left text-center">ALLSECTIONS</h1>
+        {[
+          "Headers",
+          "Features",
+          "Attractive",
+          "Testimonials",
+          "Videos",
+        ].map((item, index) => (
+          <li
+            key={index}
+            className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        <h1 className="text-white text-2xl font-bold sm:text-left text-center">COMPANY</h1>
+        {["About", "Blog", "Pricing", "Affiliate", "Login"].map(
+          (item, index) => (
+            <li
+              key={index}
+              className="mt-4 text-center md:text-left hover:text-yellow-500 transition duration-300 cursor-pointer"
+            >
+              {item}
+            </li>
+          )
+        )}
+      </ul>
+    </div>
+  </div>
+
+  {/* Footer Bottom */}
+  <hr className="w-full bg-white mt-10 opacity-20" />
+  <p className="text-gray-400 mt-8 text-center">
+    © 2025 HouseHub. Designed By Sprinaa & Moha.
+  </p>
+</div>
     </div>
   );
 }
