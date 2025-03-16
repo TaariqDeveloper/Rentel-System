@@ -220,49 +220,88 @@ const FeaturedPropertyTypes = () => {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-12">
       {/* Property Types Section */}
-      <section className="py-12 bg-gray-100 text-center">
-        <motion.h2
-          className="text-4xl font-bold text-gray-900 tracking-wide"
-          initial={{ opacity: 0, y: -50 }}
+      <section className="py-12 bg-gray-100 text-center h-auto min-h-[500px]">
+  <div className="container mx-auto px-4">
+    <motion.h2
+      className="text-2xl sm:text-3xl font-bold text-gray-800"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      Noocyada Guryaha ee Soomaaliya
+    </motion.h2>
+    <motion.p
+      className="text-gray-500 mt-2 text-sm sm:text-base"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 1 }}
+    >
+      Ka hel dhammaan noocyada guryaha Soomaaliya.
+    </motion.p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mt-8">
+      {[
+        {
+          icon: "🏡",
+          color: "red-500",
+          bg: "red-100",
+          title: "Guri Dabaq ah",
+          count: "45 Guryo",
+        },
+        {
+          icon: "🏠",
+          color: "green-500",
+          bg: "green-100",
+          title: "Guri Dhisme Cusub",
+          count: "85 Guryo",
+        },
+        {
+          icon: "🏢",
+          color: "yellow-500",
+          bg: "yellow-100",
+          title: "Apartment Muqdisho",
+          count: "200 Guryo",
+        },
+        {
+          icon: "🏬",
+          color: "purple-500",
+          bg: "purple-100",
+          title: "Xafiisyo Ganacsi",
+          count: "60 Xafiis",
+        },
+        {
+          icon: "🏖️",
+          color: "blue-500",
+          bg: "blue-100",
+          title: "Guryo Xeebeed",
+          count: "30 Guryo",
+        },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          className="bg-white p-4 sm:p-6 rounded-lg shadow-md transition 
+          transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer"
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          whileHover={{ scale: 1, transition: { duration: 0.3 } }}
+          transition={{ delay: index * 0.3, duration: 0.6 }}
         >
-          Noocyada Guryaha ee Soomaaliya
-        </motion.h2>
-        <motion.p
-          className="text-lg text-gray-600 mt-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
-        >
-          Ka hel dhammaan noocyada guryaha Soomaaliya.
-        </motion.p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
-          {propertyTypes.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 hover:shadow-xl hover:bg-gray-50 cursor-pointer transition-all"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-            >
-              <motion.div
-                className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-${item.bg} transition-transform duration-300`}
-                whileHover={{ rotate: 10 }}
-              >
-                <span className={`text-4xl text-${item.color}`}>
-                  {item.icon}
-                </span>
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-800 mt-4">
-                {item.title}
-              </h3>
-              <p className="text-base text-gray-500">{item.count}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+          <motion.div
+            className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto flex items-center justify-center rounded-full bg-${item.bg} transition-transform duration-300`}
+            whileHover={{ rotate: 10 }}
+          >
+            <span className={`text-2xl sm:text-3xl text-${item.color}`}>
+              {item.icon}
+            </span>
+          </motion.div>
+          <h3 className="text-base sm:text-lg font-semibold text-gray-700 mt-4">
+            {item.title}
+          </h3>
+          <p className="text-sm sm:text-base text-gray-500">{item.count}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Featured Listings Section */}
       <section className="relative mt-12">
