@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-
 const authContext = createContext();
-
 function ContextProvide({ children }) {
   const [user, setUser] = useState(null);
   const login = (user) => {
