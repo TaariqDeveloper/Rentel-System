@@ -148,6 +148,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { motion } from "framer-motion";
 import Header from "./../../components/Header/Header";
+import image6 from "../../Assets/feature6.jpg";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -210,18 +211,19 @@ function ContactForm() {
   return (
     <>
       <Header />
-      <section className="py-12 bg-gray-100 mt-10">
+      <section className="">
         <ToastContainer />
+<img className="w-full  h-[900px] relative" src={image6} alt="" />
         <motion.div
-          className="container mx-auto px-6"
+          className="container mx-auto px-6 absolute inset-0 top-[100px]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-center text-blue-600">
+          <h2 className="text-3xl font-bold text-center text-yellow-500">
             CONTACT US FOR A FREE QUOTE!
           </h2>
-          <div className="flex flex-wrap mt-10">
+          <div className="flex flex-wrap mt-10  ">
             {/* Google Map */}
             <motion.div className="w-full md:w-1/2">
               <iframe
@@ -237,7 +239,7 @@ function ContactForm() {
             <motion.div className="w-full md:w-1/2 px-6">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white shadow-lg rounded-lg p-6"
+                className="bg-white shadow-lg rounded-lg p-6 absolute"
               >
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -322,7 +324,7 @@ function ContactForm() {
 
                 <motion.button
                   type="submit"
-                  className="w-full mt-6 bg-yellow-300 text-blue-700 text-lg font-bold py-3 rounded-md hover:bg-yellow-400 transition duration-300"
+                  className="w-full mt-6 bg-yellow-500 text-white text-lg font-bold py-3 rounded-md hover:bg-yellow-400 transition duration-300"
                   whileHover={{ scale: 1.05 }}
                 >
                   Submit
