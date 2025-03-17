@@ -46,9 +46,9 @@ const ProtectedRoute = ({ children }) => {
   const savedUser = JSON.parse(localStorage.getItem("user"));
 
   // If no user exists, send them to SignUp first
-  if (!savedUser) {
-    return <Navigate to="/register" replace />;
-  }
+  // if (!savedUser) {
+  //   return <Navigate to="/register" replace />;
+  // }
 
   // If user is not logged in, send them to Login first
   if (!user) {

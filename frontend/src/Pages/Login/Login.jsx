@@ -303,7 +303,6 @@ function Login() {
 
       if (response.data.success) {
         toast.success("Login successful!", { position: "top-right" });
-
         // Save token and user info
         localStorage.setItem("token", response.data.token);
         login(response.data.user);
