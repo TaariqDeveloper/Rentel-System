@@ -1,9 +1,9 @@
 // const Booking = require("../Model/Booking");
-
-// // ✅ Create a new booking
+// // ✅ Create Booking
 // const createBooking = async (req, res) => {
 //   try {
 //     const { name, email, phone, house, checkIn, checkOut, guests } = req.body;
+
 //     const newBooking = new Booking({
 //       name,
 //       email,
@@ -11,19 +11,18 @@
 //       house,
 //       checkIn,
 //       checkOut,
-//       guests
+//       guests,
 //     });
 
 //     await newBooking.save();
-//     res.status(201).json({ success: true, message: "Booking successful!", data: newBooking });
+//     res.status(201).json({ success: true, message: "Booking created!", data: newBooking });
 //   } catch (error) {
-//     console.error("Booking Error:", error);
-//     res.status(500).json({ success: false, message: "Booking failed", error: error.message });
+//     res.status(500).json({ success: false, message: "Booking failed!", error: error.message });
 //   }
 // };
 
-// // ✅ Get all bookings
-// const getBookings = async (req, res) => {
+// // ✅ Get All Bookings
+// const getAllBookings = async (req, res) => {
 //   try {
 //     const bookings = await Booking.find();
 //     res.status(200).json({ success: true, data: bookings });
@@ -36,7 +35,8 @@
 // const getBookingById = async (req, res) => {
 //   try {
 //     const booking = await Booking.findById(req.params.id);
-//     if (!booking) return res.status(404).json({ success: false, message: "Booking not found" });
+//     if (!booking) return res.status(404).json({ success: false,
+//       message: "Booking not found" });
 
 //     res.status(200).json({ success: true, data: booking });
 //   } catch (error) {
@@ -69,25 +69,39 @@
 //   }
 // };
 
-// module.exports = { createBooking, getBookings , getBookingById, updateBooking, deleteBooking};
 
 
 
 
+// // ✅ Get Total Number of Bookings
+// const TotalBooking = async (req, res) => {
+//   try {
+//     const total = await Booking.find().countDocuments(); // Use Booking model
+//     res.status(200).json({ success: true, total });
+//   } catch (error) {
+//     res.status(500).json({ success: false, message: "Error fetching total bookings", error: error.message });
+//   }
+// };
 
 
 
 
+// module.exports = { createBooking, getAllBookings, getBookingById, updateBooking,
+//    deleteBooking, TotalBooking };
 
 
-
-
+//    // waa kugu soo labana hadii error i qabsado
 
 const Booking = require("../Model/Booking");
-// ✅ Create Booking
+
+// ✅ Create Booking with Price
 const createBooking = async (req, res) => {
   try {
-    const { name, email, phone, house, checkIn, checkOut, guests } = req.body;
+    const { name, email, phone, house, checkIn, checkOut, guests, price } = req.body;
+
+    if (!price) {
+      return res.status(400).json({ success: false, message: "Price is required!" });
+    }
 
     const newBooking = new Booking({
       name,
@@ -97,6 +111,7 @@ const createBooking = async (req, res) => {
       checkIn,
       checkOut,
       guests,
+      price, // ✅ Storing price in database
     });
 
     await newBooking.save();
@@ -120,8 +135,7 @@ const getAllBookings = async (req, res) => {
 const getBookingById = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
-    if (!booking) return res.status(404).json({ success: false, 
-      message: "Booking not found" });
+    if (!booking) return res.status(404).json({ success: false, message: "Booking not found" });
 
     res.status(200).json({ success: true, data: booking });
   } catch (error) {
@@ -129,7 +143,7 @@ const getBookingById = async (req, res) => {
   }
 };
 
-// ✅ Update Booking
+// ✅ Update Booking (including price)
 const updateBooking = async (req, res) => {
   try {
     const updatedBooking = await Booking.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -154,14 +168,10 @@ const deleteBooking = async (req, res) => {
   }
 };
 
-
-
-
-
 // ✅ Get Total Number of Bookings
 const TotalBooking = async (req, res) => {
   try {
-    const total = await Booking.find().countDocuments(); // Use Booking model
+    const total = await Booking.find().countDocuments();
     res.status(200).json({ success: true, total });
   } catch (error) {
     res.status(500).json({ success: false, message: "Error fetching total bookings", error: error.message });
@@ -171,19 +181,22 @@ const TotalBooking = async (req, res) => {
 
 
 
-// this is qaas
-// Function to count total bookings
+// ✅ Get Total Price of All Bookings
+const getTotalBookingPrice = async (req, res) => {
+  try {
+    const totalPrice = await Booking.aggregate([
+      { $group: { _id: null, total: { $sum: "$price" } } }
+    ]);
 
-// display all bookings
-// const TotalBook = async (req, res) => {
-//         const total = await Booking.find().countDocuments()
-//         if (total) {
-//                 res.send({total})
-//         }
-// }
+    const total = totalPrice.length > 0 ? totalPrice[0].total : 0;
+
+    res.status(200).json({ success: true, totalPrice: total });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error calculating total price", error: error.message });
+  }
+};
 
 
 
 
-module.exports = { createBooking, getAllBookings, getBookingById, updateBooking,
-   deleteBooking, TotalBooking };
+module.exports = { createBooking, getAllBookings, getBookingById, updateBooking, deleteBooking, TotalBooking, getTotalBookingPrice };

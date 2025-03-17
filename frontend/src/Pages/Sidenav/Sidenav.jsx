@@ -358,14 +358,14 @@ function SideNav() {
                     User List
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/register"
                     className="block p-2 rounded-lg hover:bg-gray-700 transition duration-300"
                   >
                     Add User
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </li>
