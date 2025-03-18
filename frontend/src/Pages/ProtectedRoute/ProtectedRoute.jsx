@@ -37,6 +37,29 @@
 
 // i will comback
 
+// import { Navigate, useLocation } from "react-router-dom";
+// import { useAuth } from "../../components/context/ContextProvide";
+
+// const ProtectedRoute = ({ children }) => {
+//   const { user } = useAuth();
+//   const location = useLocation();
+//   const savedUser = JSON.parse(localStorage.getItem("user"));
+
+//   // If no user exists, send them to SignUp first
+//   if (!savedUser) {
+//     return <Navigate to="/register" replace />;
+//   }
+
+//   // If user is not logged in, send them to Login first
+//   if (!user) {
+//     return <Navigate to="/login" state={{ from: location.pathname }} replace />;
+//   }
+
+//   return children;
+// };
+
+// export default ProtectedRoute;
+
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../components/context/ContextProvide";
 
@@ -45,13 +68,8 @@ const ProtectedRoute = ({ children }) => {
   const location = useLocation();
   const savedUser = JSON.parse(localStorage.getItem("user"));
 
-  // If no user exists, send them to SignUp first
-  // if (!savedUser) {
-  //   return <Navigate to="/register" replace />;
-  // }
-
-  // If user is not logged in, send them to Login first
-  if (!user) {
+  // If user is not logged in, send them to Login page
+  if (!savedUser || !user) {
     return <Navigate to="/login" state={{ from: location.pathname }} replace />;
   }
 
