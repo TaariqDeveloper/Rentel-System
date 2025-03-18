@@ -213,7 +213,7 @@ function ContactForm() {
       <Header />
       <section className="">
         <ToastContainer />
-<img className="w-full  h-[900px] relative" src={image6} alt="" />
+        <img className="w-full  h-[900px] relative" src={image6} alt="" />
         <motion.div
           className="container mx-auto px-6 absolute inset-0 top-[100px]"
           initial={{ opacity: 0, y: -50 }}
