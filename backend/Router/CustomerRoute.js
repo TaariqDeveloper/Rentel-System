@@ -20,5 +20,6 @@ Router.put("/customers/:id", imageUpload.single("image"), CustomerController.upd
 Router.delete("/customers/:id", CustomerController.deleteCustomer);
 Router.get("/total/customers", CustomerController.TotalCustomers);
 
+
 module.exports = Router;
 
