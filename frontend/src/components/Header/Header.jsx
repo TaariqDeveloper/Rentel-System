@@ -245,7 +245,7 @@ function Header() {
               <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
             </button>
             <button
-              className="bg-green-500 text-white px-5 py-2 rounded-lg ml-4
+              className="bg-green-500 text-white px-5 py-2 rounded-lg ml-2
            shadow-md hover:bg-yellow-500 transition animate-pulse"
             >
               <Link to="/addCustomer">RegisterCustomer</Link>
