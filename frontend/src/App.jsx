@@ -180,6 +180,7 @@ function App() {
         <Route path="/ContactForm" element={<ContactForm />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/addCustomer" element={<AddCustomer />} />
 
         {/* Protected Routes (Require Login) */}
         <Route
@@ -214,14 +215,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route
+
+        {/* <Route
           path="/addCustomer"
           element={
             <ProtectedRoute>
               <AddCustomer />
             </ProtectedRoute>
           }
-        />
+        /> */}
+
         <Route
           path="/order"
           element={
@@ -230,6 +233,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/displayCustomer"
           element={
