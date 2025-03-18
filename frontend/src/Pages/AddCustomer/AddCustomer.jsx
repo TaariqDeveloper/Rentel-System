@@ -158,7 +158,8 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // ✅ Used for navigation after registration
+import { useNavigate } from "react-router-dom";
+// import image2 from "../images/ser.jpg"; // ✅ Used for navigation after registration
 
 function AddCustomer() {
   const navigate = useNavigate();
@@ -210,6 +211,10 @@ function AddCustomer() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <ToastContainer />
+
+      {/* <div>
+        <img src={image2} alt="" />
+      </div> */}
       <motion.div
         className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg"
         initial={{ opacity: 0, y: -50 }}
