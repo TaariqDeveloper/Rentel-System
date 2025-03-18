@@ -148,7 +148,7 @@ function Footer() {
 
 
        {/* Social Media Icons */}
-       <div className="mt-8 flex gap-4 justify-center md:justify-start">
+       <div className="mt-8 flex gap-4 justify-center md:justify-start animate-pulse">
         <a
           href="https://facebook.com"
           target="_blank"

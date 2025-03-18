@@ -216,7 +216,7 @@ function AddCustomer() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+        <h2 className="text-3xl font-bold text-center text-yellow-500 mb-6">
           Register as Customer
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -302,7 +302,8 @@ function AddCustomer() {
 
           <motion.button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300"
+            className="w-full bg-yellow-500 text-white py-3 rounded-md
+             hover:bg-green-500 transition duration-300"
             whileHover={{ scale: 1.05 }}
           >
             Register & Book
