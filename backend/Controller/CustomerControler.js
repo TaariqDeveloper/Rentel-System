@@ -120,6 +120,8 @@ const TotalCustomers = async (req, res) => {
   }
 };
 
+
+
 module.exports = { createCustomer, getCustomers, getCustomerById, updateCustomer, deleteCustomer, TotalCustomers };
 
 
