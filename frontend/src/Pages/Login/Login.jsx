@@ -275,6 +275,102 @@
 
 // export default Login;
 
+// import React, { useState } from "react";
+// import axios from "axios";
+// import { useNavigate, useLocation } from "react-router-dom";
+// import { useAuth } from "../../components/context/ContextProvide";
+// import { toast, ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
+// function Login() {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const navigate = useNavigate();
+//   const location = useLocation();
+//   const { login } = useAuth();
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     try {
+//       const response = await axios.post(
+//         "http://localhost:5000/api/auth/login",
+//         {
+//           email,
+//           password,
+//         }
+//       );
+
+//       if (response.data.success) {
+//         toast.success("Login successful!", { position: "top-right" });
+//         // Save token and user info
+//         localStorage.setItem("token", response.data.token);
+//         login(response.data.user);
+
+//         // Redirect to dashboard
+//         setTimeout(() => navigate(location.state?.from || "/dashboard"), 2000);
+//       } else {
+//         toast.error("Invalid email or password!", { position: "top-right" });
+//       }
+//     } catch (error) {
+//       toast.error("Server error! Try again.", { position: "top-right" });
+//     }
+//   };
+
+//   return (
+//     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl">
+//       <ToastContainer /> {/* ✅ Toast for notifications */}
+//       <div className="bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-lg rounded-lg p-8 w-full max-w-md">
+//         <h2 className="text-2xl font-bold text-center text-white mb-6">
+//           Login
+//         </h2>
+
+//         <form className="space-y-4" onSubmit={handleSubmit}>
+//           <div className="relative">
+//             <label htmlFor="email" className="block text-white font-medium">
+//               Email
+//             </label>
+//             <i className="fa-solid fa-envelope absolute text-xl text-gray-400 top-[50px] transform -translate-y-1/2 left-3 mt-1"></i>
+//             <input
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               type="email"
+//               placeholder="Enter Email"
+//               required
+//               className="w-full mt-1 py-3 p-4 px-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+//             />
+//           </div>
+
+//           <div className="relative">
+//             <label htmlFor="password" className="block text-white font-medium">
+//               Password
+//             </label>
+//             <i className="fa-solid fa-unlock absolute text-gray-400 top-[50px] transform -translate-y-1/2 left-3"></i>
+//             <input
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//               type="password"
+//               placeholder="******"
+//               required
+//               className="w-full mt-1 p-3 px-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+//             />
+//           </div>
+
+//           {/* Submit Button */}
+//           <button
+//             type="submit"
+//             className="w-full bg-yellow-500 text-white py-3 rounded-md hover:bg-yellow-500 transition duration-300"
+//           >
+//             Login
+//           </button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Login;
+
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -295,20 +391,19 @@ function Login() {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/login",
-        {
-          email,
-          password,
-        }
+        { email, password }
       );
 
       if (response.data.success) {
         toast.success("Login successful!", { position: "top-right" });
-        // Save token and user info
+
+        // ✅ Save user to localStorage (Fixes logout issue in Chrome)
+        localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("token", response.data.token);
         login(response.data.user);
 
-        // Redirect to dashboard
-        setTimeout(() => navigate(location.state?.from || "/dashboard"), 2000);
+        // ✅ Redirect to previous page or dashboard
+        navigate(location.state?.from || "/dashboard");
       } else {
         toast.error("Invalid email or password!", { position: "top-right" });
       }
@@ -319,7 +414,7 @@ function Login() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-xl">
-      <ToastContainer /> {/* ✅ Toast for notifications */}
+      <ToastContainer />
       <div className="bg-gradient-to-r from-green-500 bg-[#0a1636] shadow-lg rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-white mb-6">
           Login
@@ -330,14 +425,13 @@ function Login() {
             <label htmlFor="email" className="block text-white font-medium">
               Email
             </label>
-            <i className="fa-solid fa-envelope absolute text-xl text-gray-400 top-[50px] transform -translate-y-1/2 left-3 mt-1"></i>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Enter Email"
               required
-              className="w-full mt-1 py-3 p-4 px-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full mt-1 py-3 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -345,18 +439,16 @@ function Login() {
             <label htmlFor="password" className="block text-white font-medium">
               Password
             </label>
-            <i className="fa-solid fa-unlock absolute text-gray-400 top-[50px] transform -translate-y-1/2 left-3"></i>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="******"
               required
-              className="w-full mt-1 p-3 px-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-yellow-500 text-white py-3 rounded-md hover:bg-yellow-500 transition duration-300"
