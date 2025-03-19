@@ -403,7 +403,8 @@ function AddCustomer() {
               Welcome to Our Service <i className="fa-solid fa-door-open text-yellow-500"></i>
             </h2>
             <p className="text-sm md:text-base text-gray-700">
-              We are here to provide you with the best <span className="text-yellow-500">Home</span> services. Explore our services and let us know how we can help you.
+              We are here to provide you with the best
+               <span className="text-yellow-500">Home</span> services.<br></br> Explore our services and let us know how we can help you.
             </p>
 
             {/* Icons at the bottom */}
