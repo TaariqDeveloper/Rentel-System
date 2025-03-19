@@ -227,6 +227,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
+ 
   FaBox,
   FaUsers,
   FaShoppingCart,
@@ -317,9 +318,17 @@ function SideNav() {
       <div className="bg-[#0a1636] text-white w-[250px] h-screen fixed flex flex-col p-5 mt-16 transition-all duration-500 shadow-lg">
         <h2 className="text-xl font-bold mb-6 text-center">Admin Dashboard</h2>
 
-        <ul className="space-y-3">
+        <ul className="space-y-3 mt-10">
+
+        <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
+      
+            <Link to="/dashboard" className="hover:underline">
+              <span> <i class="fa-brands fa-windows mr-3 text-lg"></i>Dashboard</span>
+            </Link>
+          </li>
           {/* Products */}
-          <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
+          <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer
+           hover:bg-gray-700 transition duration-300">
             <FaBox className="text-lg" />
             <Link to="/bookingList" className="hover:underline">
               <span>bookings</span>

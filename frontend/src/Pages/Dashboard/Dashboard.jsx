@@ -700,10 +700,11 @@ import {
   FaDollarSign,
 } from "react-icons/fa";
 import SideNav from "../Sidenav/Sidenav";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+
 
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -760,7 +761,7 @@ function Dashboard() {
     HandleAllUsers();
     HandleAllCustomers();
     HandleTotalBookingPrice(); // ✅ Fetch Total Price
-
+ 
     const interval = setInterval(() => {
       HandleAllBookings();
       HandleAllUsers();
@@ -771,6 +772,7 @@ function Dashboard() {
     return () => clearInterval(interval);
   }, []);
 
+ 
   // Booking Pie Chart Data
   const bookingChartData = {
     labels: ["Bookings", "Available"],
@@ -832,6 +834,8 @@ function Dashboard() {
       <SideNav />
       {/* Four Stat Boxes */}
       <div className="ml-[22%] pt-20 flex gap-6 flex-wrap">
+        
+     
         {/* Booking Box */}
         <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg flex items-center gap-4 w-[250px]">
           <FaBox className="text-4xl" />
