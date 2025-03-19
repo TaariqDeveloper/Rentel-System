@@ -257,6 +257,7 @@ import OrdersPage from "./Pages/OrdersPage/OrdersPage";
 import CustomerDisplay from "./Pages/CustomerDisplay/CustomerDisplay";
 import ProtectedRoute from "./Pages/ProtectedRoute/ProtectedRoute";
 import PropertyDetail from "./components/RecentPropertyListed/PropertyDetail";
+import ContactMessages from "./Pages/ContactMessages/ContactMessages";
 
 function App() {
   return (
@@ -271,6 +272,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/addCustomer" element={<AddCustomer />} />
         <Route path="/property/:id" element={<PropertyDetail />} />
+        <Route path="/ContactMessages" element={<ContactMessages />} />
 
         {/* Protected Routes (Require Login) */}
         <Route
