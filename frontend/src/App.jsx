@@ -272,7 +272,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/addCustomer" element={<AddCustomer />} />
         <Route path="/property/:id" element={<PropertyDetail />} />
-        <Route path="/ContactMessages" element={<ContactMessages />} />
+        {/* <Route path="/ContactMessages" element={<ContactMessages />} /> */}
 
         {/* Protected Routes (Require Login) */}
         <Route
@@ -283,6 +283,16 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        <Route
+          path="/ContactMessages"
+          element={
+            <ProtectedRoute>
+              <ContactMessages />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="/UserList"
           element={
