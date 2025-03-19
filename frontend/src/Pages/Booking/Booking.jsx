@@ -1052,10 +1052,10 @@ const Booking = () => {
 
   // House Prices Per Night Per Guest Count
   const housePrices = {
-    "Villa Raaxo": { 1: 100, 2: 120, 3: 140, 4: 160 },
-    "Guri Xeebeed": { 1: 80, 2: 95, 3: 110, 4: 125 },
-    "Buuraleyda Cabin": { 1: 60, 2: 75, 3: 90, 4: 105 },
-    "Guri Magaaleed": { 1: 50, 2: 65, 3: 80, 4: 95 },
+    "Villa Raaxo ah": { 1: 100, 2: 120, 3: 140, 4: 160 },
+    "Guri Xeebeed ": { 1: 80, 2: 95, 3: 110, 4: 125 },
+    "Guri Buuraley": { 1: 60, 2: 75, 3: 90, 4: 105 },
+    "Guriyaha magaloyinka ": { 1: 50, 2: 65, 3: 80, 4: 95 },
   };
 
   const houses = Object.keys(housePrices);
