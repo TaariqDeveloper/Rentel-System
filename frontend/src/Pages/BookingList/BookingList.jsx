@@ -277,7 +277,7 @@ const BookingList = () => {
   );
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100 ">
       <SideNav />
       <div className="flex-grow flex mt-20 justify-center p-6">
         <ToastContainer />
@@ -285,7 +285,7 @@ const BookingList = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-6xl"
+          className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-6xl "
         >
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
             📋 Dhammaan Kireynta
@@ -307,8 +307,9 @@ const BookingList = () => {
             <p className="text-center text-red-500">No data found</p>
           )}
 
-          <div className="overflow-hidden rounded-lg shadow-lg">
-            <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-lg overflow-hidden">
+          <div className="overflow-hidden rounded-lg shadow-lg ">
+            <table className="min-w-full bg-white border border-gray-300 shadow-md 
+            rounded-lg overflow-hidden ">
               <thead>
                 <tr className="bg-gradient-to-r from-blue-400 to-green-400 text-white">
                   <th className="py-4 px-6 border">Magaca</th>
