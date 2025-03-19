@@ -327,14 +327,11 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import image from "../../images/booking.jpg"; // Replace with your image path
 import image1 from "../../images/team-1.jpg"; // Replace with your image path
 import image3 from "../../images/team-2.jpg"; // Replace with your image path
 import image4 from "../../images/team-5.jpg"; // Replace with your image path
 import Header from "../../components/Header/Header";
-=======
->>>>>>> be50e33a7b3ca376ec438c3d4e5e444a3e906e05
 
 function AddCustomer() {
   const navigate = useNavigate();
@@ -347,36 +344,16 @@ function AddCustomer() {
     image: null,
   });
 
-  const [error, setError] = useState(""); // ✅ Validation Error Handling
-
-  // Handle Input Changes
   const handleChange = (e) => {
     setCustomer({ ...customer, [e.target.name]: e.target.value });
   };
 
-  // Handle File Upload
   const handleFileChange = (e) => {
     setCustomer({ ...customer, image: e.target.files[0] });
   };
 
-  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // ✅ Validation: Ensure all fields are filled
-    if (
-      !customer.name ||
-      !customer.email ||
-      !customer.phone ||
-      !customer.address ||
-      !customer.gender ||
-      !customer.image
-    ) {
-      setError("⚠️ Please fill in all fields before registering!");
-      return;
-    }
-
-    setError(""); // ✅ Clear previous error messages
     const formData = new FormData();
     Object.keys(customer).forEach((key) => {
       formData.append(key, customer[key]);
@@ -389,6 +366,15 @@ function AddCustomer() {
       setTimeout(() => {
         navigate("/booking"); // Redirects to booking page after successful registration
       }, 1500);
+
+      setCustomer({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        gender: "",
+        image: null,
+      });
     } catch (error) {
       toast.error("Registration failed! Try again.", { position: "top-right" });
     }
@@ -398,7 +384,6 @@ function AddCustomer() {
     <div>
       <Header />
       <ToastContainer />
-<<<<<<< HEAD
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 mt-20 p-4">
         {/* Image Section */}
         <motion.div
@@ -444,46 +429,6 @@ function AddCustomer() {
                 <img src={image4} alt="Icon 3" className="w-8 h-8 md:w-10 md:h-10 rounded-full shadow-lg shadow-yellow-500" />
               </motion.div>
               <i className="fa-solid fa-arrow-right ml-4 md:ml-10 mt-2 text-yellow-500 text-xl md:text-2xl"></i>
-=======
-      <motion.div
-        className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold text-center text-yellow-500 mb-6">
-          Register as Customer
-        </h2>
-
-        {/* ✅ Show Error Message if Fields are Missing */}
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-gray-600 font-medium">Name</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter Name"
-                value={customer.name}
-                onChange={handleChange}
-                required
-                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-600 font-medium">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter Email"
-                value={customer.email}
-                onChange={handleChange}
-                required
-                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-              />
->>>>>>> be50e33a7b3ca376ec438c3d4e5e444a3e906e05
             </div>
           </div>
         </motion.div>
@@ -582,42 +527,12 @@ function AddCustomer() {
               className="w-full bg-green-500 text-white py-2 md:py-3 rounded-md hover:bg-green-600 transition duration-300"
               whileHover={{ scale: 1.05 }}
             >
-<<<<<<< HEAD
               Register & Book
             </motion.button>
           </form>
         </motion.div>
       </div>
-=======
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-gray-600 font-medium">
-              Upload Image
-            </label>
-            <input
-              type="file"
-              onChange={handleFileChange}
-              className="w-full p-3 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-
-          <motion.button
-            type="submit"
-            className="w-full bg-yellow-500 text-white py-3 rounded-md
-             hover:bg-green-500 transition duration-300"
-            whileHover={{ scale: 1.05 }}
-          >
-            Register & Book
-          </motion.button>
-        </form>
-      </motion.div>
->>>>>>> be50e33a7b3ca376ec438c3d4e5e444a3e906e05
+       
     </div>
   );
 }
