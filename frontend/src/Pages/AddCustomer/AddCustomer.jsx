@@ -332,6 +332,7 @@ import image1 from "../../images/team-1.jpg"; // Replace with your image path
 import image3 from "../../images/team-2.jpg"; // Replace with your image path
 import image4 from "../../images/team-5.jpg"; // Replace with your image path
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function AddCustomer() {
   const navigate = useNavigate();
@@ -532,7 +533,7 @@ function AddCustomer() {
           </form>
         </motion.div>
       </div>
-       
+       <Footer/>
     </div>
   );
 }
