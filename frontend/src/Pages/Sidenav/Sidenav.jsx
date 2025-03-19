@@ -227,7 +227,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
- 
   FaBox,
   FaUsers,
   FaShoppingCart,
@@ -319,16 +318,19 @@ function SideNav() {
         <h2 className="text-xl font-bold mb-6 text-center">Admin Dashboard</h2>
 
         <ul className="space-y-3 mt-10">
-
-        <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
-      
+          <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
             <Link to="/dashboard" className="hover:underline">
-              <span> <i class="fa-brands fa-windows mr-3 text-lg"></i>Dashboard</span>
+              <span>
+                {" "}
+                <i class="fa-brands fa-windows mr-3 text-lg"></i>Dashboard
+              </span>
             </Link>
           </li>
           {/* Products */}
-          <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer
-           hover:bg-gray-700 transition duration-300">
+          <li
+            className="flex items-center gap-3 p-3 rounded-lg cursor-pointer
+           hover:bg-gray-700 transition duration-300"
+          >
             <FaBox className="text-lg" />
             <Link to="/bookingList" className="hover:underline">
               <span>bookings</span>
@@ -392,6 +394,14 @@ function SideNav() {
             <FaUserShield className="text-lg" />
             <Link to="/orders" className="hover:underline">
               <span>Orders</span>
+            </Link>
+          </li>
+
+          {/* inpox */}
+          <li className="flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-gray-700 transition duration-300">
+            <FaUserShield className="text-lg" />
+            <Link to="/inbox" className="hover:underline">
+              <span>Inpox</span>
             </Link>
           </li>
         </ul>
