@@ -256,6 +256,7 @@ import AddCustomer from "./Pages/AddCustomer/AddCustomer";
 import OrdersPage from "./Pages/OrdersPage/OrdersPage";
 import CustomerDisplay from "./Pages/CustomerDisplay/CustomerDisplay";
 import ProtectedRoute from "./Pages/ProtectedRoute/ProtectedRoute";
+import PropertyDetail from "./components/RecentPropertyListed/PropertyDetail";
 
 function App() {
   return (
@@ -269,6 +270,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/login" element={<Login />} />
         <Route path="/addCustomer" element={<AddCustomer />} />
+        <Route path="/property/:id" element={<PropertyDetail />} />
 
         {/* Protected Routes (Require Login) */}
         <Route
