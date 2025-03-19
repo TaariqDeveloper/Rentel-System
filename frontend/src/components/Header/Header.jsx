@@ -235,7 +235,7 @@ function Header() {
           </nav>
 
           {/* ✅ Fixed Login Button (Desktop) */}
-          <div className="hidden lg:block">
+          <div className=" hidden  lg:block">
             <button
               onClick={() => navigate("/login")} // ✅ Now it correctly redirects to login
               className="bg-green-500 text-white px-5 py-2 rounded-lg
@@ -246,7 +246,7 @@ function Header() {
             </button>
             <button
               className="bg-green-500 text-white px-5 py-2 rounded-lg ml-2
-           shadow-md hover:bg-yellow-500 transition animate-pulse"
+           shadow-md hover:bg-yellow-500 transition animate-pulse sm:mt-0 mt-2"
             >
               <Link to="/addCustomer">RegisterCustomer</Link>
             </button>
@@ -299,13 +299,25 @@ function Header() {
               </li>
               <li>
                 {/* ✅ Fixed Mobile Login Button */}
+                
                 <button
                   onClick={() => navigate("/login")}
                   className="bg-green-500 text-white px-5 py-2 
                     rounded-lg shadow-md hover:bg-yellow-500 transition"
                 >
                   Login
+                  <i className="fa-solid fa-up-right-and-down-left-from-center ml-2"></i>
                 </button>
+               
+            
+              </li>
+              <li>
+              <button
+              className="bg-green-500 text-white px-5 py-2 rounded-lg 
+           shadow-md hover:bg-yellow-500 transition animate-pulse sm:mt-0 mt-2"
+            >
+              <Link to="/addCustomer">RegisterCustomer</Link>
+            </button>
               </li>
             </ul>
           </div>
