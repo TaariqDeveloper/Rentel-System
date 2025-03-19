@@ -960,7 +960,7 @@ function AddCustomer() {
               className={`w-full text-white py-2 rounded-md transition duration-300 ${
                 isFormValid()
                   ? "bg-green-500 hover:bg-green-600"
-                  : "bg-gray-400 cursor-not-allowed"
+                  : "bg-yellow-500 cursor-not-allowed"
               }`}
               whileHover={{ scale: 1.05 }}
               disabled={!isFormValid()}
