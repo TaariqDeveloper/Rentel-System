@@ -24,8 +24,6 @@ const PropertyDetail = () => {
     image1, // Image 1
     image2, // Image 2
     image3, // Image 3
-  
-   
   ];
 
   useEffect(() => {
@@ -76,13 +74,13 @@ const PropertyDetail = () => {
     <div>
       <Header/>
       <div className="bg-gray-100 min-h-screen py-12 mt-20">
-        <div className="max-w-6xl h-[950px] ml-20 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-lg shadow-lg overflow-hidden">
           {/* Selected Image with Navigation Controls */}
           <div className="relative">
             <img
               src={selectedImage}
               alt={property.name}
-              className="w-full h-96 object-cover"
+              className="w-full h-64 sm:h-96 object-cover"
             />
             {/* Previous Button */}
             <button
@@ -101,7 +99,7 @@ const PropertyDetail = () => {
           </div>
 
           {/* Image Gallery */}
-          <div className="grid grid-cols-4 gap-2 p-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-4">
             {additionalImages.map((image, index) => (
               <img
                 key={index}
@@ -119,19 +117,20 @@ const PropertyDetail = () => {
           </div>
 
           {/* Property Details */}
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <div className="p-4 sm:p-8">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
               {property.name}
             </h1>
             <p className="text-gray-600 mb-6">{property.description}</p>
 
             {/* Price and Type */}
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-2xl font-bold text-green-600">
+            <div className="flex flex-col sm:flex-row items-center justify-between mb-6 
+            sm:mr-0 mr-48
+            ">
+              <span className="text-2xl  font-bold text-green-600 mb-2 sm:mb-0">
                 ${property.price}
               </span>
-              <span className="text-sm text-green-500 bg-gray-200 px-3 py-1
-               rounded-full">
+              <span className="text-sm text-green-500 bg-gray-200 px-3 py-1 rounded-full">
                 {property.type}
               </span>
             </div>
@@ -143,7 +142,7 @@ const PropertyDetail = () => {
             </div>
 
             {/* Additional Features */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="flex items-center text-gray-600">
                 <FaBed className="mr-2" />
                 <p>3 Bedrooms</p>
@@ -163,7 +162,7 @@ const PropertyDetail = () => {
             </div>
 
             {/* Contact Button */}
-            <button className="w-full bg-yellow-500 text-white py-3 mt-20 rounded-lg font-bold hover:bg-green-600 transition">
+            <button className="w-full bg-yellow-500 text-white py-3 mt-6 rounded-lg font-bold hover:bg-green-600 transition">
               Home Dream
             </button>
           </div>
