@@ -172,7 +172,9 @@ function Header() {
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           {/* Logo */}
           <h1 className="text-3xl font-bold text-green-500">
-            <i className="fa-solid fa-house-medical-circle-check text-yellow-500 mr-2 "></i>
+            <i className="fa-solid fa-house-medical-circle-check text-yellow-500 mr-2
+            transition-all
+       duration-300 hover:scale-125 hover:text-green-500 "></i>
             Rental House
           </h1>
 
@@ -250,6 +252,13 @@ function Header() {
             >
               <Link to="/addCustomer">RegisterCustomer</Link>
             </button>
+           
+      
+      <i className="fa-solid fa-users-line text-3xl text-green-500 transition-all
+       duration-300 hover:scale-125 hover:text-yellow-500 ml-3"></i>
+    
+
+   
           </div>
         </div>
 
