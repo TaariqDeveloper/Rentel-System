@@ -1138,7 +1138,7 @@ const Booking = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="  bg-gradient-to-r from-white shadow-2xl rounded-2xl p-8 w-full
+          className="  bg-gradient-to-r from-white shadow-4xl rounded-2xl p-8 w-full
            max-w-4xl flex flex-col md:flex-row z-10 "
         >
           {/* Form Section */}
