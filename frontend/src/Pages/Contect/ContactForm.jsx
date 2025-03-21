@@ -344,10 +344,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { motion } from "framer-motion";
 import Header from "./../../components/Header/Header";
-import image6 from "../../Assets/feature6.jpg";
+import image6 from "../../Assets/feature3.jpg";
+import Footer from "../../components/Footer/Footer";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -449,27 +449,28 @@ function ContactForm() {
   return (
     <>
       <Header />
-      <section className="">
+      <section className="relative">
         <ToastContainer />
         <img
-          className="w-full h-[900px] relative"
-          src={image6}
+          className="w-full h-[900px] object-cover object-center 
+           bg-gradient-to-r from-yellow-500 bg-[#0a1636] shadow-xl"
+          src=""
           alt="Background"
         />
         <motion.div
-          className="container mx-auto px-6 absolute inset-0 top-[100px]"
+          className="container mx-auto px-4 sm:px-6 lg:px-8 absolute inset-0 top-[100px]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-center text-yellow-500">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-white">
             CONTACT US FOR A FREE QUOTE!
           </h2>
           <div className="flex flex-wrap mt-10">
             {/* Google Map */}
-            <motion.div className="w-full md:w-1/2">
+            <motion.div className="w-full md:w-1/2 mb-8 md:mb-0">
               <iframe
-                className="w-full h-96 rounded-lg shadow-lg"
+                className="w-full h-64 sm:h-96 rounded-lg shadow-lg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.253663663443!2d-122.41941608468144!3d37.77492977975924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809cbae45317%3A0xf5c0ebbd1d46250!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
                 allowFullScreen
                 loading="lazy"
@@ -478,12 +479,12 @@ function ContactForm() {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div className="w-full md:w-1/2 px-6">
+            <motion.div className="w-full md:w-1/2 px-4 sm:px-6">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white shadow-lg rounded-lg p-6"
+                className="bg-white shadow-lg rounded-lg p-4 sm:p-6"
               >
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-gray-600 font-medium">
                       First name *
@@ -493,7 +494,7 @@ function ContactForm() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      className={`w-full mt-1 p-3 border ${
+                      className={`w-full mt-1 p-2 sm:p-3 border ${
                         errors.firstName ? "border-red-500" : "border-gray-300"
                       } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     />
@@ -510,7 +511,7 @@ function ContactForm() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      className={`w-full mt-1 p-3 border ${
+                      className={`w-full mt-1 p-2 sm:p-3 border ${
                         errors.lastName ? "border-red-500" : "border-gray-300"
                       } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     />
@@ -529,7 +530,7 @@ function ContactForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full mt-1 p-3 border ${
+                    className={`w-full mt-1 p-2 sm:p-3 border ${
                       errors.email ? "border-red-500" : "border-gray-300"
                     } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   />
@@ -547,7 +548,7 @@ function ContactForm() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full mt-1 p-3 border ${
+                    className={`w-full mt-1 p-2 sm:p-3 border ${
                       errors.subject ? "border-red-500" : "border-gray-300"
                     } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   />
@@ -565,7 +566,7 @@ function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full mt-1 p-2 sm:p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                   {errors.message && (
                     <p className="text-red-500 text-sm">{errors.message}</p>
@@ -574,17 +575,18 @@ function ContactForm() {
 
                 <motion.button
                   type="submit"
-                  className="w-full mt-6 bg-yellow-500 text-white text-lg font-bold py-3 rounded-md hover:bg-yellow-400 transition duration-300"
+                  className="w-full mt-6 bg-green-500 text-white text-lg font-bold py-2 sm:py-3 rounded-md hover:bg-yellow-400 transition duration-300"
                   whileHover={{ scale: 1.05 }}
                   disabled={!validateForm()}
                 >
-                  Submit
+                  Send Message
                 </motion.button>
               </form>
             </motion.div>
           </div>
         </motion.div>
       </section>
+      <Footer/>
     </>
   );
 }
