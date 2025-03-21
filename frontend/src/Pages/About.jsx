@@ -200,7 +200,7 @@ function About() {
           />
           <motion.img
             className="w-[220px] h-[180px] rounded-lg absolute top-[220px] left-[20px]
-             lg:left-[55px]"
+             lg:left-[55px]    animate-pulse"
             src={image}
             alt="Overlay"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -251,7 +251,7 @@ function About() {
               </p>
             </div>
             <motion.button
-              className="bg-yellow-500 text-xl text-white px-4 py-2 mt-10 "
+              className="bg-yellow-500 text-xl text-white px-4 py-2 mt-10 animate-pulse "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

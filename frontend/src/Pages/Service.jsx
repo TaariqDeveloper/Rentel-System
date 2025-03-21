@@ -155,6 +155,14 @@ function Service() {
     ))}
   </div>
 </div>
+
+
+<div>
+    {/* section3----------------- */}
+    <div>
+      
+    </div>
+</div>
       <Footer />
     </div>
   );
