@@ -449,14 +449,16 @@ function ContactForm() {
   return (
     <>
       <Header />
-      <section className="relative">
+      <div className="sm:mb-0 mb-[200px]">
+      <section className="w-full h-[900px] object-cover object-center 
+           bg-gradient-to-r from-yellow-500 bg-[#0a1636] shadow-xl">
         <ToastContainer />
-        <img
+        {/* <img
           className="w-full h-[900px] object-cover object-center 
            bg-gradient-to-r from-yellow-500 bg-[#0a1636] shadow-xl"
           src=""
           alt="Background"
-        />
+        /> */}
         <motion.div
           className="container mx-auto px-4 sm:px-6 lg:px-8 absolute inset-0 top-[100px]"
           initial={{ opacity: 0, y: -50 }}
@@ -482,7 +484,7 @@ function ContactForm() {
             <motion.div className="w-full md:w-1/2 px-4 sm:px-6">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white shadow-lg rounded-lg p-4 sm:p-6"
+                className="bg-white shadow-lg rounded-lg p-4 sm:p-6 sm:mb-0 mb-20"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -586,6 +588,7 @@ function ContactForm() {
           </div>
         </motion.div>
       </section>
+      </div>
       <Footer/>
     </>
   );
