@@ -1138,134 +1138,206 @@ const Booking = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-4xl flex z-10"
+          className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-4xl flex flex-col md:flex-row z-10"
         >
           {/* Form Section */}
-          <div className="w-1/2 pr-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0"
+          >
             <h2 className="text-3xl font-bold text-center text-green-500 mb-6">
               Book a House
             </h2>
 
             {!isRegistered && (
-              <p className="text-red-500 text-center font-bold mb-4">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-red-500 text-center font-bold mb-4"
+              >
                 ❌ Please register first before booking.
-              </p>
+              </motion.p>
             )}
 
             <form className="space-y-4" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-3 border rounded-md"
-                disabled={!isRegistered}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-3 border rounded-md"
-                disabled={!isRegistered}
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full p-3 border rounded-md"
-                disabled={!isRegistered}
-              />
-
-              <select
-                name="house"
-                className="w-full p-3 border rounded-md"
-                required
-                value={formData.house}
-                onChange={handleChange}
-                disabled={!isRegistered}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <option value="">Select House</option>
-                {houses.map((house, index) => (
-                  <option key={index} value={house}>
-                    {house}
-                  </option>
-                ))}
-              </select>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  disabled={!isRegistered}
+                />
+              </motion.div>
 
-              <input
-                type="date"
-                name="checkIn"
-                required
-                value={formData.checkIn}
-                onChange={handleChange}
-                className="w-full p-3 border rounded-md"
-                disabled={!isRegistered}
-              />
-              <input
-                type="date"
-                name="checkOut"
-                required
-                value={formData.checkOut}
-                onChange={handleChange}
-                className="w-full p-3 border rounded-md"
-                disabled={!isRegistered}
-              />
-
-              <select
-                name="guests"
-                className="w-full p-3 border rounded-md"
-                required
-                value={formData.guests}
-                onChange={handleChange}
-                disabled={!isRegistered}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <option value="1">1 Guest</option>
-                <option value="2">2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
-              </select>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  disabled={!isRegistered}
+                />
+              </motion.div>
 
-              <input
-                type="text"
-                name="price"
-                placeholder="Total Price"
-                className="w-full p-3 border rounded-md"
-                value={formData.price}
-                readOnly
-              />
-
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                className={`w-full text-white py-3 rounded-md transition 
-                  duration-300  ${
-                  isRegistered
-                    ? "bg-green-600 hover:bg-green-700"
-                    : "bg-green-500 cursor-not-allowed"
-                }`}
-                disabled={!isRegistered}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
               >
-                Confirm Booking
-              </motion.button>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  disabled={!isRegistered}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                <select
+                  name="house"
+                  className="w-full p-3 border rounded-md"
+                  required
+                  value={formData.house}
+                  onChange={handleChange}
+                  disabled={!isRegistered}
+                >
+                  <option value="">Select House</option>
+                  {houses.map((house, index) => (
+                    <option key={index} value={house}>
+                      {house}
+                    </option>
+                  ))}
+                </select>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                <input
+                  type="date"
+                  name="checkIn"
+                  required
+                  value={formData.checkIn}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  disabled={!isRegistered}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.1 }}
+              >
+                <input
+                  type="date"
+                  name="checkOut"
+                  required
+                  value={formData.checkOut}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  disabled={!isRegistered}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+              >
+                <select
+                  name="guests"
+                  className="w-full p-3 border rounded-md"
+                  required
+                  value={formData.guests}
+                  onChange={handleChange}
+                  disabled={!isRegistered}
+                >
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                </select>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.3 }}
+              >
+                <input
+                  type="text"
+                  name="price"
+                  placeholder="Total Price"
+                  className="w-full p-3 border rounded-md"
+                  value={formData.price}
+                  readOnly
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.4 }}
+              >
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full text-white py-3 rounded-md transition duration-300 ${
+                    isRegistered
+                      ? "bg-green-600 hover:bg-green-700"
+                      : "bg-green-500 cursor-not-allowed"
+                  }`}
+                  disabled={!isRegistered}
+                >
+                  Confirm Booking
+                </motion.button>
+              </motion.div>
             </form>
-          </div>
+          </motion.div>
 
           {/* Image Section */}
-          <div className="w-1/2 h-[700px] overflow-hidden rounded-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full md:w-1/2 h-[400px] md:h-[700px] overflow-hidden rounded-2xl"
+          >
             <img
-              src={backgroundImage} // Replace with an image if needed
+              src={backgroundImage}
               alt="Booking"
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </>
