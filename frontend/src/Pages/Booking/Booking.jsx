@@ -1148,7 +1148,7 @@ const Booking = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0"
           >
-            <h2 className="text-3xl font-bold text-center text-white mb-6">
+            <h2 className="text-3xl font-bold text-center text-green-500 mb-6">
               Book a House
             </h2>
 
