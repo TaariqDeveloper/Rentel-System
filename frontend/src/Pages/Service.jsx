@@ -157,66 +157,141 @@ function Service() {
 </div>
 
 
-<div>
-    {/* section3----------------- */}
-    <button className="bg-yellow-500/20 text-white px-1 py-1 ml-[600px] rounded-full">Our Services</button>
-    <h1  className="text-center text-4xl font-bold mt-10">Our Core Services</h1>
-    <div className="px-10 py-20 grid grid-cols-3 gap-8 ">
-      
-      <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-      <i class="fa-solid fa-house ml-[130px] text-2xl mt-10 text-green-500"></i>
-       <h1 className="text-center text-2xl mt-4 ">Property Management</h1>
-       <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website,
-         we can match you with 
-        a house you will want to call home.</p>
+<div className="py-20 bg-gray-50">
+      {/* Section 3: Our Services */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Button and Heading */}
+        <div className="text-center">
+          <motion.button
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-yellow-500/20 text-white px-4 py-2 rounded-full text-sm font-medium"
+          >
+            Our Services
+          </motion.button>
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-3xl sm:text-4xl font-bold mt-6"
+          >
+            Our Core Services
+          </motion.h1>
+        </div>
+
+        {/* Service Cards */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Card 1: Property Management */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-solid fa-house text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Property Management
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+
+          {/* Card 2: Mortgage Service */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-solid fa-house-chimney-user text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Mortgage Service
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+
+          {/* Card 3: Consulting Service */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-solid fa-people-roof text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Consulting Service
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+
+          {/* Card 4: Home Buying */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-brands fa-buy-n-large text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Home Buying
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+
+          {/* Card 5: Home Selling */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-brands fa-buysellads text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Home Selling
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+
+          {/* Card 6: Escrow Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full bg-white shadow-lg shadow-gray-200 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          >
+            <i className="fa-solid fa-house-laptop text-4xl text-green-500 mx-auto block text-center"></i>
+            <h1 className="text-center text-2xl font-semibold mt-6">
+              Escrow Services
+            </h1>
+            <p className="text-gray-500 mt-4 text-sm text-center">
+              Over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+          </motion.div>
+        </div>
       </div>
-
-
-      <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-      <i class="fa-solid fa-house-chimney-user  ml-[130px] text-2xl mt-10
-       text-green-500"></i>
-        <h1 className="text-center text-2xl mt-4 ">Mortgage Service</h1>
-        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home..</p>
-       </div>
-
-
-       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-       <i class="fa-solid fa-people-roof   ml-[130px] text-2xl mt-10
-       text-green-500"></i>
-        <h1 className="text-center text-2xl mt-4 ">Consulting Service</h1>
-        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-       </div>
-
-
-
-       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-       <i class="fa-brands fa-buy-n-large   ml-[130px] text-2xl mt-10
-       text-green-500"></i>
-        <h1 className="text-center text-2xl mt-4  ">Home Buying</h1>
-        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-       </div>
-
-       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-       <i class="fa-brands fa-buysellads  ml-[130px] text-2xl mt-10
-       text-green-500"></i>
-        <h1 className="text-center text-2xl mt-4 ">Home Selling</h1>
-        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-       </div>
-
-       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
-       
-       <i class="fa-solid fa-house-laptop   ml-[130px] text-2xl mt-10
-       text-green-500"></i>
-        <h1 className="text-center text-2xl mt-4 ">Escrow Services</h1>
-        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-       </div>
     </div>
-</div>
       <Footer />
     </div>
   );
