@@ -163,7 +163,7 @@ const PropertyDetail = () => {
 
             {/* Contact Button */}
             <button className="w-full bg-yellow-500 text-white py-3 mt-6 rounded-lg font-bold hover:bg-green-600 transition">
-              Home Dream
+              Choose u House
             </button>
           </div>
         </div>
