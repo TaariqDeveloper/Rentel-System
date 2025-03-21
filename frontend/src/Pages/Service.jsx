@@ -159,8 +159,62 @@ function Service() {
 
 <div>
     {/* section3----------------- */}
-    <div>
+    <button className="bg-yellow-500/20 text-white px-1 py-1 ml-[600px] rounded-full">Our Services</button>
+    <h1  className="text-center text-4xl font-bold mt-10">Our Core Services</h1>
+    <div className="px-10 py-20 grid grid-cols-3 gap-8 ">
       
+      <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+      <i class="fa-solid fa-house ml-[130px] text-2xl mt-10 text-green-500"></i>
+       <h1 className="text-center text-2xl mt-4 ">Property Management</h1>
+       <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website,
+         we can match you with 
+        a house you will want to call home.</p>
+      </div>
+
+
+      <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+      <i class="fa-solid fa-house-chimney-user  ml-[130px] text-2xl mt-10
+       text-green-500"></i>
+        <h1 className="text-center text-2xl mt-4 ">Mortgage Service</h1>
+        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home..</p>
+       </div>
+
+
+       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+       <i class="fa-solid fa-people-roof   ml-[130px] text-2xl mt-10
+       text-green-500"></i>
+        <h1 className="text-center text-2xl mt-4 ">Consulting Service</h1>
+        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+       </div>
+
+
+
+       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+       <i class="fa-brands fa-buy-n-large   ml-[130px] text-2xl mt-10
+       text-green-500"></i>
+        <h1 className="text-center text-2xl mt-4  ">Home Buying</h1>
+        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+       </div>
+
+       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+       <i class="fa-brands fa-buysellads  ml-[130px] text-2xl mt-10
+       text-green-500"></i>
+        <h1 className="text-center text-2xl mt-4 ">Home Selling</h1>
+        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+       </div>
+
+       <div className="w-[320px] h-[250px] bg-white shadow-lg shadow-gray-500 rounded-lg px-4">
+       
+       <i class="fa-solid fa-house-laptop   ml-[130px] text-2xl mt-10
+       text-green-500"></i>
+        <h1 className="text-center text-2xl mt-4 ">Escrow Services</h1>
+        <p className="text-gray-400 mt-4 text-sm">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+       </div>
     </div>
 </div>
       <Footer />
