@@ -739,6 +739,8 @@
 
 // export default AddCustomer;
 
+//last
+
 import React, { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
@@ -746,9 +748,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import image from "../../images/booking.jpg";
-import image1 from "../../images/team-1.jpg";
-import image3 from "../../images/team-2.jpg";
-import image4 from "../../images/team-5.jpg";
+// import image1 from "../../images/team-1.jpg";
+// import image3 from "../../images/team-2.jpg";
+// import image4 from "../../images/team-5.jpg";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
